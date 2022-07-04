@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- /src/mapper/mybatis-config.xml -->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org/DTD config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="mybatis.Member" alias="member" />
+		<typeAlias type="mybatis.Board" alias="board" />
+		<typeAlias type="mybatis.Hotel" alias="hotel" />
+		<typeAlias type="mybatis.ReserveHotel" alias="reserveHotel" />
+		<typeAlias type="mybatis.Clinic" alias="clinic" />
+		<typeAlias type="mybatis.ReserveClinic"
+			alias="reserveClinic" />
+		<typeAlias type="mybatis.PlayPlace" alias="playPlace" />
+		<typeAlias type="mybatis.Goods" alias="goods" />
+		<typeAlias type="mybatis.Cart" alias="cart" />
+		<typeAlias type="mybatis.H_Review" alias="h_review" />
+		<typeAlias type="mybatis.C_Review" alias="c_review" />
+
+	</typeAliases>
+
+	<mappers><!-- sql 구문 -->
+		<mapper class="mapper.MemberMapper" />
+		<mapper class="mapper.BoardMapper" />
+		<mapper class="mapper.HotelMapper" />
+		<mapper class="mapper.ReserveHotelMapper" />
+		<mapper class="mapper.ClinicMapper" />
+		<mapper class="mapper.ReserveClinicMapper" />
+		<mapper class="mapper.PlayPlaceMapper" />
+		<mapper class="mapper.GoodsMapper" />
+		<mapper class="mapper.CartMapper" />
+		<mapper class="mapper.H_ReviewMapper" />
+		<mapper class="mapper.C_ReviewMapper" />
+	</mappers>
+</configuration>
