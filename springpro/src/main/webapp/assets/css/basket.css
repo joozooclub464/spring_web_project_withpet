@@ -1,0 +1,78 @@
+@charset "EUC-KR";
+.c {
+  background-color: #ff6e61bd;
+  display: flex;
+  height: 115px;
+  justify-content: center;
+  text-align: center;
+}
+
+.work__projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.project {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 250px;
+    margin: 10px;
+    background-color: white;
+}
+
+.project__img {
+    width: 250px;
+    height: 250px;
+}
+
+.project_desc{
+	margin:30px;
+	width:50%;
+	padding:10px;
+}
+
+.ss {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 30px;
+}
+
+.ssi {
+  padding: 30px;
+  margin: 15px;
+}
+
+.checkbox {
+  justify-content: center;
+}
+
+.sa {
+  padding: 30px;
+  text-align: left;
+}
+
+.st {
+  text-align: right;
+  padding: 30px;
+}
+
+.ssall {
+  width: 70%;
+  justify-content: center;
+  margin-left: 15%;
+}
+
+.stt {
+  text-align: right;
+  padding: 5px;
+}
+
+.fff {
+  text-align: center;
+}

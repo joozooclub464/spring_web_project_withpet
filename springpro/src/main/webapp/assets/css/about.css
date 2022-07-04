@@ -1,0 +1,163 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+/* @charset "utf-8"; */
+:root {
+  --color-baemin: #2ac1bc;
+  --animation-duration: 300ms;
+  --color-white: #ffffff;
+  --color-yellow: #fff7d1;
+  --color-lightcoral: #e77471;
+  --color-lightcoralpink3: #f08080;
+  --color-livingcoral: #ff6f61;
+  --color-livingcoral: #ff6d70;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-black: #4d4d4d;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+  /* Size */
+  --size-border-radius: 4px;
+  /* Annimation */
+  --animation-duration: 300ms;
+  font-family: "BMHANNAPro";
+}
+
+/* Universal tags */
+
+* {
+  box-sizing: border-box;
+  /* text-align: center; */
+/*   margin-top: 5px; */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  /* color: var(--color-white); */
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  margin-left: 5px;
+}
+
+/* li {
+  list-style: none;
+  text-align: left;
+} */
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.bodysize {
+  padding: 0 40 0 40;
+}
+
+/* Typography */
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
+
+/*---------------21.05.08---------------------------------------------*/
+
+.aboutcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 15px;
+  text-align: left;
+  /* margin: 20px; */
+  margin: 45px;
+  margin-left: 15%;
+  width: 70%;
+}
+.divbgcolor {
+  background-color: #fffef6;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* margin: 20px; */
+  margin: 45px;
+  /* box-sizing: border-box; */
+}
+.detail2 {
+  justify-content: center;
+  margin: 45px;
+}
+
+#image-container {
+  width: 500px;
+  height: 300px;
+  padding: 3%;
+}
+.mid {
+  padding: 0px 15px;
+}
+.one {
+  /* width: 97%; */
+  margin: 45px;
+}
+.num {
+  color: #fe918d;
+}
+
+.fontcolor {
+  --color-dark-grey: #4d4d4d;
+}
+.notb {
+  font-weight: normal;
+} /* 援듦린瑜� �뾾�븷�젮怨� �겕濡� 李쎌뿉�꽌 �솗�씤�뻽�쓣�븣 h4�꽕�젙�뿉 font-weight:bold;濡� �쟻�슜�릺�뼱 �엳�뒗嫄� �솗�씤�뻽�뒗�뜲 css�뙆�씪�뿉�꽌 h4 寃��깋�씠 �븞 �맖.*/
