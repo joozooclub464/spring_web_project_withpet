@@ -1,4 +1,4 @@
-=================================================시퀀스생성
+--=================================================시퀀스생성
 create sequence memberpetseq start with 1;
 create sequence boardpetseq start with 1;
 create sequence clinicseq start with 1;
@@ -10,7 +10,7 @@ create sequence goodsseq start with 1;
 CREATE SEQUENCE cartseq start with 1;
 create sequence reviewseq start with 1;
 
-==================================================테이블생성
+--==================================================테이블생성
 --회원관리
 create table memberpet(
 id varchar2(50) primary key, --회원아이디
@@ -25,10 +25,11 @@ address varchar2(300),
 memlevel varchar2(50),
 pet_kind varchar2(50), --반려동물종류(강아지, 고양이, 금붕어 등)
 pet_name varchar2(50),
-pet_age number(50),
+pet_age number(30), --number는 38까지만 가능해서 원래 50이었지만 바꿔봄
 agree number(1), --약관동의
 picture varchar2(200)
-ON DELETE CASCADE);
+--ON DELETE CASCADE
+);
 
 --게시물관리
 create table boardpet(
@@ -48,7 +49,7 @@ boardid varchar2(50));
 
 --병원관리
 create table clinic(
-c_num number(50) primary key, --병원코드
+c_num number(30) primary key, --병원코드 --number는 38까지만 가능해서 원래 50이었지만 바꿔봄
 c_name varchar(50) not null, --병원명
 c_location varchar2(300) not null, --병원위치
 c_tel varchar(50) not null, --병원전화번호
@@ -131,7 +132,16 @@ gbsDes varchar(500),        -- 상품설명
 picture varchar(200)        --상품이미지
 );
 
-//장바구니 테이블 생성
+--리뷰
+create table review(
+rv_num number(30),
+id varchar2(30),
+rv_desc varchar2(500),
+c_num number(30),
+h_num number(30)
+);
+
+--//장바구니 테이블 생성
 CREATE TABLE cart(
 cartid NUMBER PRIMARY KEY,
 id varchar2(50) references memberpet(id) on delete cascade,
@@ -142,10 +152,10 @@ gbsPrice number(30),    -- 상품가격
 cartStock number);
 
 
-//카트 담기 예제
+--//카트 담기 예제
 insert into cart(cart_id ,id, gbsNum, cartStock) values (1,'admin',1,21);
 
-//상품 등록
+--//상품 등록
 INSERT INTO goods VALUES(2,'핏펫몰 공식 강아지사료
 ANF 유기농 사료','75000','너도나도좋아하는사료','meal2.JPG');
 
@@ -159,15 +169,8 @@ INSERT INTO goods VALUES(6,'플라고 송곳니 칫솔','6800','너도나도좋�
 
 INSERT INTO goods VALUES(1,'펫 피트니스 로봇','90000','너도나도좋아하는친구','petrobot.JPG');
 
---리뷰
-create table review(
-rv_num number(30),
-id varchar2(30),
-rv_desc varchar2(500),
-c_num number(30),
-h_num number(30)
-);
-==============================================테이블 삭제용
+
+--==============================================테이블 삭제용
 drop table reserveclinic;
 drop table reservehotel;
 drop table clinic;
@@ -176,5 +179,7 @@ drop table playplace;
 drop table boardpet;
 drop table cart;
 drop table memberpet;
+drop table goods;
+drop table review;
 
-==============================================
+--==============================================
