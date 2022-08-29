@@ -5,7 +5,7 @@
 <html>
 <head>
 <title>With.pet`</title>
-<meta charset="euc-kr">
+<meta charset="EUC-KR">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet"
@@ -60,6 +60,7 @@
 			<source src="<%=request.getContextPath()%>/video\xodus.mp4"
 				type="video/mp4">
 		</video>
+		
 	<div class="content__2">
 		<div class="content__desc" style="padding: 0px 50px 0px 0px">
 			<p1>사람과 반려동물을<br>
@@ -256,7 +257,7 @@
 			</div>
 		</div>
 	</section>
-
+	</div><!--  -->
 </body>
 <!-- Main -->
 <div id="main">
