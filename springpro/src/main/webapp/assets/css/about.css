@@ -1,6 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
-/* @charset "utf-8"; */
+@charset "UTF-8";
 :root {
   --color-baemin: #2ac1bc;
   --animation-duration: 300ms;
@@ -160,4 +160,4 @@ p {
 }
 .notb {
   font-weight: normal;
-} /* 援듦린瑜� �뾾�븷�젮怨� �겕濡� 李쎌뿉�꽌 �솗�씤�뻽�쓣�븣 h4�꽕�젙�뿉 font-weight:bold;濡� �쟻�슜�릺�뼱 �엳�뒗嫄� �솗�씤�뻽�뒗�뜲 css�뙆�씪�뿉�꽌 h4 寃��깋�씠 �븞 �맖.*/
+} /* �뤃�벀由곁몴占� 占쎈씨占쎈막占쎌젻�⑨옙 占쎄쾿嚥∽옙 筌≪럩肉됵옙苑� 占쎌넇占쎌뵥占쎈뻥占쎌뱽占쎈르 h4占쎄퐬占쎌젟占쎈퓠 font-weight:bold;嚥∽옙 占쎌읅占쎌뒠占쎈┷占쎈선 占쎌뿳占쎈뮉椰꾬옙 占쎌넇占쎌뵥占쎈뻥占쎈뮉占쎈쑓 css占쎈솁占쎌뵬占쎈퓠占쎄퐣 h4 野껓옙占쎄퉳占쎌뵠 占쎈툧 占쎈쭡.*/
