@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <title>RESERVATION_PAGE_ANDYversion</title>
 
@@ -13,7 +13,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- <link rel="stylesheet" href="C:\Users\andya\Documents\Ä«Ä«¿ÀÅå ¹ÞÀº ÆÄÀÏ\clinic\css\main.css"> -->
+<!-- <link rel="stylesheet" href="C:\Users\andya\Documents\ì¹´ì¹´ì˜¤í†¡ ë°›ì€ íŒŒì¼\clinic\css\main.css"> -->
 
 
 <div class="is-preload">
@@ -35,27 +35,27 @@
 					<form action="reserve" name="f" method="post">
 						<div class="row">
 							<div class="col-6 col-12-small andysize">
-								<h3>¿äÃ»»çÇ×</h3>
+								<h3>ìš”ì²­ì‚¬í•­</h3>
 								<input type="text" name="problem"> <input type="hidden"
 									name="c_name" value="${clinic.c_name}"> <input
 									type="hidden" name="c_num" value="${clinic.c_num}"> <input
 									type="hidden" name="c_tel" value="${clinic.c_tel}">
 								<!-- <div>
-                                <input type="text" placehoder="°Ë»ö¾î ÀÔ·Â">
-                                <button>°Ë»ö</button>
+                                <input type="text" placehoder="ê²€ìƒ‰ì–´ ìž…ë ¥">
+                                <button>ê²€ìƒ‰</button>
 
                             </div> -->
 
 								<!-- <div class="dropdown">
-									<button class="dropbtn">Å¸ÀÔ</button>
+									<button class="dropbtn">íƒ€ìž…</button>
 									<div class="dropdown-content">
-										<a href="#">Ç×¸ñ2</a> <a href="#">Ç×¸ñ3</a> <a href="#">Ç×¸ñ4</a> <a
-											href="#">Ç×¸ñ5</a>
+										<a href="#">í•­ëª©2</a> <a href="#">í•­ëª©3</a> <a href="#">í•­ëª©4</a> <a
+											href="#">í•­ëª©5</a>
 											
 									</div>
 								</div> -->
 
-								<h3>¿¹¾àÀÏÀÚ</h3>
+								<h3>ì˜ˆì•½ì¼ìž</h3>
 								<p>
 									<input type="date" name="date1">
 								</p>
@@ -72,7 +72,7 @@
 									type="text" name="pet_kind" value="${member.pet_kind}">
 								<br>Pet's name<br> <input type="text" name="pet_name" value="${member.pet_name}"><br>Pet's
 								age<br> <input type="text" name="pet_age" value="${member.pet_age}"> <br/><br/>
-								<!-- ¿¹¾à ÈÄ È®ÀÎ ¹öÆ°ÀÌ ¼öÁ¤, Ãë¼Ò ¹öÆ°À¸·Î ¹Ù²ñ -->
+								<!-- ì˜ˆì•½ í›„ í™•ì¸ ë²„íŠ¼ì´ ìˆ˜ì •, ì·¨ì†Œ ë²„íŠ¼ìœ¼ë¡œ ë°”ë€œ -->
 								<input type="submit" value="Submit">
 
 							</div>

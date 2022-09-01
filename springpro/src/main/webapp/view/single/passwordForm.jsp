@@ -1,13 +1,13 @@
 <%@page import="dao.MemberDaoMybatis"%>
 <%@page import="mybatis.Member"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link rel="stylesheet" href="<%=request.getContextPath() %>/assets/css/change_pw.css" />
 <script type="text/javascript">
 function inchk(f){
 	if(f.chgpass.value != f.chgpass2.value){
-		alert("º¯°æ ºñ¹Ğ¹øÈ£¿Í ÀçÀÔ·ÂÀÌ ´Ù¸¨´Ï´Ù.");
+		alert("ë³€ê²½ ë¹„ë°€ë²ˆí˜¸ì™€ ì¬ì…ë ¥ì´ ë‹¤ë¦…ë‹ˆë‹¤.");
 		f.chgpass2.value="";
 		f.chgpass2.focus();
 		return false;
@@ -43,7 +43,7 @@ function inchk(f){
             <br />
         </div>
         <div style="color: gray">
-            ´ç½ÅÀÇ Çàº¹ÀÌ ÇÔ²²ÇÏ´Â ¿©Çà, À§µåÆê<br />¿ì¸®´Â ´ç½ÅÀÇ Çàº¹À» ÁöÁöÇÕ´Ï´Ù&nbsp;&nbsp;: )
+            ë‹¹ì‹ ì˜ í–‰ë³µì´ í•¨ê»˜í•˜ëŠ” ì—¬í–‰, ìœ„ë“œí«<br />ìš°ë¦¬ëŠ” ë‹¹ì‹ ì˜ í–‰ë³µì„ ì§€ì§€í•©ë‹ˆë‹¤&nbsp;&nbsp;: )
             <br />
             <br />
         </div>

@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <title>With.pet`</title>
-<meta charset="euc-kr">
+<meta charset="UTF-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet"
@@ -62,17 +62,17 @@
 		</video>
 	<div class="content__2">
 		<div class="content__desc" style="padding: 0px 50px 0px 0px">
-			<p1>»ç¶÷°ú ¹Ý·Áµ¿¹°À»<br>
-			ÇâÇÑ ¸ðµç ¿¬°áÀÇ ½ÃÀÛ, À§µåÆê</p1>
+			<p1>ì‚¬ëžŒê³¼ ë°˜ë ¤ë™ë¬¼ì„<br>
+			í–¥í•œ ëª¨ë“  ì—°ê²°ì˜ ì‹œìž‘, ìœ„ë“œíŽ«</p1>
 		</div>
 		<div class="content__desc2" style="padding: 0px 130px 0px 0px">
-			<p4>¼ÒÁßÇÑ °¡Á·°ú ¾ÈºÎ¸¦ ¹¯°í ÀÌ¾ß±â¸¦ ³ª´² º¸¼¼¿ä. ¿©ÇàÀÇ Æí¸®¸¦ µ½´Â ´Ù¾çÇÑ ±â´Éµµ ÁØºñµÇ¾î ÀÖ½À´Ï´Ù.<br>
-			¼¼»óÀ» ÇâÇØ ¿­¸° ¹®À» ¡®Åå¡¯ÇÏ°í µÎµå·Á º¸¼¼¿ä.</p4>
+			<p4>ì†Œì¤‘í•œ ê°€ì¡±ê³¼ ì•ˆë¶€ë¥¼ ë¬»ê³  ì´ì•¼ê¸°ë¥¼ ë‚˜ëˆ  ë³´ì„¸ìš”. ì—¬í–‰ì˜ íŽ¸ë¦¬ë¥¼ ë•ëŠ” ë‹¤ì–‘í•œ ê¸°ëŠ¥ë„ ì¤€ë¹„ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.<br>
+			ì„¸ìƒì„ í–¥í•´ ì—´ë¦° ë¬¸ì„ â€˜í†¡â€™í•˜ê³  ë‘ë“œë ¤ ë³´ì„¸ìš”.</p4>
 		</div>
 		<ul class="actions">
-			<li><a href="<%=request.getContextPath()%>/view/single/about.jsp" class="button next scrolly"> <p2>ÀÚ¼¼È÷
-					º¸±â</p2>
-			</a> <!-- <button class=detail type="button"><p2>ÀÚ¼¼È÷ º¸±â</p2></button> -->
+			<li><a href="<%=request.getContextPath()%>/view/single/about.jsp" class="button next scrolly"> <p2>ìžì„¸ížˆ
+					ë³´ê¸°</p2>
+			</a> <!-- <button class=detail type="button"><p2>ìžì„¸ížˆ ë³´ê¸°</p2></button> -->
 			</li>
 		</ul>
 	</div>
@@ -148,15 +148,15 @@
 			<!-- <h2    >Reservation</h2> -->
 			<h2>Reservation & Status</h2>
 			<p>
-				'¹Ý·Á°¡Á· ÈÞ½Ä°ø°£' ¿¹¾àÇöÈ². 5¿ùÀº °³¸°ÀÌÀÇ ´Þ, À§µåÆê°ú ÇÔ²² »õ·Î¿î ¿©ÇàÀ» ¶°³ª¼¼¿ä:)<br> ¿¹¾à ÇöÈ²Àº
-				»óÈ²¿¡ µû¶ó º¯µ¿°¡´ÉÇÔ.
+				'ë°˜ë ¤ê°€ì¡± íœ´ì‹ê³µê°„' ì˜ˆì•½í˜„í™©. 5ì›”ì€ ê°œë¦°ì´ì˜ ë‹¬, ìœ„ë“œíŽ«ê³¼ í•¨ê»˜ ìƒˆë¡œìš´ ì—¬í–‰ì„ ë– ë‚˜ì„¸ìš”:)<br> ì˜ˆì•½ í˜„í™©ì€
+				ìƒí™©ì— ë”°ë¼ ë³€ë™ê°€ëŠ¥í•¨.
 			</p>
 			<div class="skillset">
 				<div class="skillset__left">
 					<h3 class="skillset__title">Status</h3>
 					<div class="skill">
 						<div class="skill__description">
-							<span>°æ±â</span> <span>99%</span>
+							<span>ê²½ê¸°</span> <span>99%</span>
 						</div>
 						<div class="skill__bar">
 							<div class="skill__value" style="width: 99%;"></div>
@@ -164,7 +164,7 @@
 					</div>
 					<div class="skill">
 						<div class="skill__description">
-							<span>¼­¿ï</span> <span>90%</span>
+							<span>ì„œìš¸</span> <span>90%</span>
 						</div>
 						<div class="skill__bar">
 							<div class="skill__value" style="width: 90%;"></div>
@@ -172,7 +172,7 @@
 					</div>
 					<div class="skill">
 						<div class="skill__description">
-							<span>ÃæºÏ</span> <span>90%</span>
+							<span>ì¶©ë¶</span> <span>90%</span>
 						</div>
 						<div class="skill__bar">
 							<div class="skill__value" style="width: 90%;"></div>
@@ -180,7 +180,7 @@
 					</div>
 					<div class="skill">
 						<div class="skill__description">
-							<span>Ãæ³²</span> <span>80%</span>
+							<span>ì¶©ë‚¨</span> <span>80%</span>
 						</div>
 						<div class="skill__bar">
 							<div class="skill__value" style="width: 80%;"></div>
@@ -188,7 +188,7 @@
 					</div>
 					<div class="skill">
 						<div class="skill__description">
-							<span>Á¦ÁÖ</span> <span>88%</span>
+							<span>ì œì£¼</span> <span>88%</span>
 						</div>
 						<div class="skill__bar">
 							<div class="skill__value" style="width: 88%;"></div>
@@ -196,7 +196,7 @@
 					</div>
 					<div class="skill">
 						<div class="skill__description">
-							<span>°æºÏ</span> <span>77%</span>
+							<span>ê²½ë¶</span> <span>77%</span>
 						</div>
 						<div class="skill__bar">
 							<div class="skill__value" style="width: 77%;"></div>
@@ -205,24 +205,24 @@
 				</div>
 				<div class="skillset__right">
 					<div class="tools">
-						<h3 class="skillset__title">4¿ù ÃÖ´ë¿¹¾à ¼÷¼Ò</h3>
+						<h3 class="skillset__title">4ì›” ìµœëŒ€ì˜ˆì•½ ìˆ™ì†Œ</h3>
 						<ul class="tools__list">
 							<br>
 
-							<li><span>½ºÅ×ÀÌÀ§µåµ¶</span></li>
-							<li><span>¼Ò³ëÆê</span></li>
-							<li><span>½ºÅ×ÀÌ°¨µ¿</span></li>
-							<li><span>¶ÇÀÚ½ºÅ×ÀÌ</span></li>
-							<li><span>Á¦ÁÖ ¸Û¸ÛÇÃ·¹ÀÌ½º</span></li>
+							<li><span>ìŠ¤í…Œì´ìœ„ë“œë…</span></li>
+							<li><span>ì†Œë…¸íŽ«</span></li>
+							<li><span>ìŠ¤í…Œì´ê°ë™</span></li>
+							<li><span>ë˜ìžìŠ¤í…Œì´</span></li>
+							<li><span>ì œì£¼ ë©ë©í”Œë ˆì´ìŠ¤</span></li>
 						</ul>
 					</div>
 					<div class="etc">
 						<h3 class="skillset__title">New OPEN</h3>
 						<ul class="etc__list">
 							<br>
-							<li><span>µµ±×¶ó¿îÁö&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
-							<li><span>¸áÆÃ&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
-							<li><span>³×ÀÌÃ³µ¶&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+							<li><span>ë„ê·¸ë¼ìš´ì§€&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+							<li><span>ë©œíŒ…&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+							<li><span>ë„¤ì´ì²˜ë…&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
 						</ul>
 					</div>
 				</div>
@@ -237,10 +237,10 @@
 
 			<div>
 				<p class="contact__rights">
-					(À¯)À§µåÆê<br /> ¼­¿ïÆ¯º°½Ã °­³²±¸ Å×Çì¶õ·Î1±æ 10 ¼¼°æºôµù 3Ãþ | ´ëÇ¥ÀÚ : ss0n9 | »ç¾÷ÀÚµî·Ï¹øÈ£ :
-					211-29-99102 | Åë½ÅÆÇ¸Å¾÷½Å°í:Á¦ 2018-¼­¿ï°­³²-2635È£ | °³ÀÎÁ¤º¸´ã´çÀÚ :
-					privacy@woohaha.co.kr <br />| Á¦ÈÞ¹®ÀÇ : partnership@woohaha.co.kr |
-					°í°´¸¸Á·¼¾ÅÍ : loveyou@withpet.co.kr | È£½ºÆÃ Á¦°øÀÚ: À§µåÆê ÁÖ½ÄÈ¸»ç
+					(ìœ )ìœ„ë“œíŽ«<br /> ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ í…Œí—¤ëž€ë¡œ1ê¸¸ 10 ì„¸ê²½ë¹Œë”© 3ì¸µ | ëŒ€í‘œìž : ss0n9 | ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸ :
+					211-29-99102 | í†µì‹ íŒë§¤ì—…ì‹ ê³ :ì œ 2018-ì„œìš¸ê°•ë‚¨-2635í˜¸ | ê°œì¸ì •ë³´ë‹´ë‹¹ìž :
+					privacy@woohaha.co.kr <br />| ì œíœ´ë¬¸ì˜ : partnership@woohaha.co.kr |
+					ê³ ê°ë§Œì¡±ì„¼í„° : loveyou@withpet.co.kr | í˜¸ìŠ¤íŒ… ì œê³µìž: ìœ„ë“œíŽ« ì£¼ì‹íšŒì‚¬
 				</p>
 			</div>
 		</div>
@@ -248,9 +248,9 @@
 			<div></div>
 			<div>
 				<p class="contact__bottom">
-					<br /> (À¯)À§µåÆêÀº Åë½ÅÆÇ¸ÅÁß°³ÀÚÀÌ¸ç Åë½ÅÆÇ¸ÅÀÇ ´ç»çÀÚ°¡ ¾Æ´Õ´Ï´Ù. µû¶ó¼­ »óÇ°/ °Å·¡Á¤º¸ ¹× °Å·¡¿Í °ü·ÃÇÏ¿©
-					Ä¡Å²ÀÇ¹ÎÁ·¿¡ µî·ÏµÈ ÆÇ¸ÅÀÚÀÇ °íÀÇ ¶Ç´Â °ú½Ç·Î ¼ÒºñÀÚ¿¡°Ô ¹ß»ýÇÏ´Â ¼ÕÇØ¿¡ ´ëÇØ (À¯)À§µåÆêÀº Ã¥ÀÓÀ» ÁöÁö ¾Ê½À´Ï´Ù. »óÇ°
-					¹× °Å·¡¿¡ °üÇÏ¿© º¸´Ù Á¤È®ÇÑ Á¤º¸´Â ÇØ´ç ÆÇ¸ÅÀÚ¿¡°Ô Á÷Á¢ È®ÀÎÇÏ¿© ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. <br /> Copyright
+					<br /> (ìœ )ìœ„ë“œíŽ«ì€ í†µì‹ íŒë§¤ì¤‘ê°œìžì´ë©° í†µì‹ íŒë§¤ì˜ ë‹¹ì‚¬ìžê°€ ì•„ë‹™ë‹ˆë‹¤. ë”°ë¼ì„œ ìƒí’ˆ/ ê±°ëž˜ì •ë³´ ë° ê±°ëž˜ì™€ ê´€ë ¨í•˜ì—¬
+					ì¹˜í‚¨ì˜ë¯¼ì¡±ì— ë“±ë¡ëœ íŒë§¤ìžì˜ ê³ ì˜ ë˜ëŠ” ê³¼ì‹¤ë¡œ ì†Œë¹„ìžì—ê²Œ ë°œìƒí•˜ëŠ” ì†í•´ì— ëŒ€í•´ (ìœ )ìœ„ë“œíŽ«ì€ ì±…ìž„ì„ ì§€ì§€ ì•ŠìŠµë‹ˆë‹¤. ìƒí’ˆ
+					ë° ê±°ëž˜ì— ê´€í•˜ì—¬ ë³´ë‹¤ ì •í™•í•œ ì •ë³´ëŠ” í•´ë‹¹ íŒë§¤ìžì—ê²Œ ì§ì ‘ í™•ì¸í•˜ì—¬ ì£¼ì‹œê¸° ë°”ëžë‹ˆë‹¤. <br /> Copyright
 					WOOHAHA. All Rights Reserved.
 				</p>
 			</div>

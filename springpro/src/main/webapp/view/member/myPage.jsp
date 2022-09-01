@@ -26,9 +26,7 @@
 		open("<%=request.getContextPath()%>/reserveHotel/editForm?rh_num="+rh_num, "", op);
 	}function win_Cedit(rc_num) {
 		var op = "width=1000, height=700, left=300, top=150";
-		open("<%=request.getContextPath()%>
-	/reserveClinic/editForm?rc_num="
-				+ rc_num, "", op);
+		open("<%=request.getContextPath()%>/reserveClinic/editForm?rc_num="+ rc_num, "", op);
 	}
 </script>
 <br />

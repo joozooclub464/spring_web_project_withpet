@@ -1,24 +1,24 @@
 <%@page import="java.io.IOException"%>
-<%@page import="com.oreilly.servlet.MultipartRequest"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%-- <%@page import="com.oreilly.servlet.MultipartRequest"%> --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     
 <%-- /WebContent/chap08_member/pictureimg.jsp
-   1. ÆÄÀÏ ¾÷·ÎµåÇÏ±â
-           ¾÷·Îµå À§Ä¡´Â  chap08_member/img/ ·Î ¼³Á¤ 
-   2. ÆÄÀÏÀÇ ³»¿äÀ» opener¿¡ Ãâ·ÂÇÏ±â. ÇöÀç À©µµ¿ì´Â close ÇÔ        
+   1. íŒŒì¼ ì—…ë¡œë“œí•˜ê¸°
+           ì—…ë¡œë“œ ìœ„ì¹˜ëŠ”  chap08_member/img/ ë¡œ ì„¤ì • 
+   2. íŒŒì¼ì˜ ë‚´ìš”ì„ openerì— ì¶œë ¥í•˜ê¸°. í˜„ì¬ ìœˆë„ìš°ëŠ” close í•¨        
 --%>
 
 <script>
    img1 = opener.document.getElementById("pic${pic}");
    img2 = opener.document.getElementById("p_img${pic}");
-   img1.src = "<%=request.getContextPath() %>/img/${filename}";  //¾÷·ÎµåµÈ ÀÌ¹ÌÁö È¸¿ø°¡ÀÔ È­¸é¿¡ Ãâ·Â
-   img2.value="${filename}"; //ÆÄ¶ó¹ÌÅÍ¿¡ ÆÄÀÏÀÌ¸§ ¼³Á¤
+   img1.src = "<%=request.getContextPath() %>/img/${filename}";  //ì—…ë¡œë“œëœ ì´ë¯¸ì§€ íšŒì›ê°€ì… í™”ë©´ì— ì¶œë ¥
+   img2.value="${filename}"; //íŒŒë¼ë¯¸í„°ì— íŒŒì¼ì´ë¦„ ì„¤ì •
    self.close();
 </script>
 <script>
    img = opener.document.getElementById("pic");
-   img.src = "<%=request.getContextPath() %>/img/${filename}";  //¾÷·ÎµåµÈ ÀÌ¹ÌÁö È¸¿ø°¡ÀÔ È­¸é¿¡ Ãâ·Â
-   opener.document.f.picture.value="${filename}"; //ÆÄ¶ó¹ÌÅÍ¿¡ ÆÄÀÏÀÌ¸§ ¼³Á¤
+   img.src = "<%=request.getContextPath() %>/img/${filename}";  //ì—…ë¡œë“œëœ ì´ë¯¸ì§€ íšŒì›ê°€ì… í™”ë©´ì— ì¶œë ¥
+   opener.document.f.picture.value="${filename}"; //íŒŒë¼ë¯¸í„°ì— íŒŒì¼ì´ë¦„ ì„¤ì •
    self.close();
 </script>

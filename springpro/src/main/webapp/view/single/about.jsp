@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="EUC-KR" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/about.css" />
@@ -51,7 +51,7 @@
         <div>
           <h4 class="num">01</h4>
           <h2 class="fontcolor">
-            반려가정 구성원 모두가 만족할 만한 숙소 정보를 제공합니다.
+             반려가정 구성원 모두가 만족할 만한 숙소 정보를 제공합니다.
           </h2>
           <br />
           <h5>

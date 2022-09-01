@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <title>RESERVATION_PAGE_ANDYversion</title>
 
@@ -13,11 +13,11 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- <link rel="stylesheet" href="C:\Users\andya\Documents\Ä«Ä«¿ÀÅå ¹ŞÀº ÆÄÀÏ\clinic\css\main.css"> -->
+<!-- <link rel="stylesheet" href="C:\Users\andya\Documents\ì¹´ì¹´ì˜¤í†¡ ë°›ì€ íŒŒì¼\clinic\css\main.css"> -->
 
 <script>
 	function cancel(rh_num) {
-		if (confirm("¿¹¾àÀ» Ãë¼ÒÇÏ°Ú½À´Ï±î?")) {
+		if (confirm("ì˜ˆì•½ì„ ì·¨ì†Œí•˜ê² ìŠµë‹ˆê¹Œ?")) {
 			location.href = "cancel?rh_num="+rh_num;
 		}
 		self.close();
@@ -41,7 +41,7 @@
 					<!-- Content -->
 					<div class="row">
 						<div class="col-6 col-12-small andysize">
-							<h3>¿äÃ»»çÇ×</h3>
+							<h3>ìš”ì²­ì‚¬í•­</h3>
 							<input type="hidden" name="content"
 								value="${reserveHotel.content}">${reserveHotel.content}<br />
 							<br /> <input type="hidden" name="h_name"
@@ -49,24 +49,24 @@
 								name="h_num" value="${reserveHotel.h_num}"> <input
 								type="hidden" name="h_tel" value="${reserveHotel.h_tel}">
 							<!-- <div>
-                                <input type="text" placehoder="°Ë»ö¾î ÀÔ·Â">
-                                <button>°Ë»ö</button>
+                                <input type="text" placehoder="ê²€ìƒ‰ì–´ ì…ë ¥">
+                                <button>ê²€ìƒ‰</button>
 
                             </div> -->
 
 							<!-- <div class="dropdown">
-									<button class="dropbtn">Å¸ÀÔ</button>
+									<button class="dropbtn">íƒ€ì…</button>
 									<div class="dropdown-content">
-										<a href="#">Ç×¸ñ2</a> <a href="#">Ç×¸ñ3</a> <a href="#">Ç×¸ñ4</a> <a
-											href="#">Ç×¸ñ5</a>
+										<a href="#">í•­ëª©2</a> <a href="#">í•­ëª©3</a> <a href="#">í•­ëª©4</a> <a
+											href="#">í•­ëª©5</a>
 											
 									</div>
 								</div> -->
 
-							¹æ Á¾·ù <input type="hidden" name="room_kind"
+							ë°© ì¢…ë¥˜ <input type="hidden" name="room_kind"
 								value="${reserveHotel.room_kind}"><br />${reserveHotel.room_kind}
 
-							<h3>¿¹¾àÀÏÀÚ</h3>
+							<h3>ì˜ˆì•½ì¼ì</h3>
 							<p>
 								<input type="hidden" name="s_date"
 									value="${reserveHotel.s_date}">${reserveHotel.s_date}
@@ -89,8 +89,8 @@
 							<br>How many pets?<br> <input type="hidden"
 								name="pet_num" value="${reserveHotel.pet_num}">${reserveHotel.pet_num}
 							<br /> <br /> <br /> <br /> <a
-								href="editForm?rh_num=${reserveHotel.rh_num}">¿¹¾à¼öÁ¤</a> <a
-								href="javascript:cancel('${reserveHotel.rh_num}')">¿¹¾àÃë¼Ò</a>
+								href="editForm?rh_num=${reserveHotel.rh_num}">ì˜ˆì•½ìˆ˜ì •</a> <a
+								href="javascript:cancel('${reserveHotel.rh_num}')">ì˜ˆì•½ì·¨ì†Œ</a>
 
 						</div>
 

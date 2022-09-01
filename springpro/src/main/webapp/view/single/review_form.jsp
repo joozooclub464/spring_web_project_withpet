@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +37,7 @@
 			<input type="submit" class="btn" value="REVIEW">
 
 			<div style="color: gray">
-				´ç½ÅÀÇ ¸ñ¼Ò¸®¸¦ µé·ÁÁÖ¼¼¿ä: )<br />¿ì¸®´Â ´ç½ÅÀ» Á¸ÁßÇÕ´Ï´Ù&nbsp;&nbsp;&nbsp;&nbsp;: ) <br />
+				ë‹¹ì‹ ì˜ ëª©ì†Œë¦¬ë¥¼ ë“¤ë ¤ì£¼ì„¸ìš”: )<br />ìš°ë¦¬ëŠ” ë‹¹ì‹ ì„ ì¡´ì¤‘í•©ë‹ˆë‹¤&nbsp;&nbsp;&nbsp;&nbsp;: ) <br />
 				<br />
 			</div>
 		</form>
