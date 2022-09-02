@@ -169,7 +169,11 @@ INSERT INTO goods VALUES(6,'플라고 송곳니 칫솔','6800','너도나도좋�
 
 INSERT INTO goods VALUES(1,'펫 피트니스 로봇','90000','너도나도좋아하는친구','petrobot.JPG');
 
-
+--==============================================테이블 자료형 크기 변경
+ALTER TABLE playplace MODIFY (p_location VARCHAR2(500)); 
+ALTER TABLE playplace MODIFY (open_hour VARCHAR2(500)); 
+ALTER TABLE playplace MODIFY (content VARCHAR2(700)); 
+ALTER TABLE playplace MODIFY (p_img6 VARCHAR2(300));
 --==============================================테이블 삭제용
 drop table reserveclinic;
 drop table reservehotel;
