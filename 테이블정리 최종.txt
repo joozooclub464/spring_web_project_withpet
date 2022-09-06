@@ -169,6 +169,13 @@ INSERT INTO goods VALUES(6,'플라고 송곳니 칫솔','6800','너도나도좋�
 
 INSERT INTO goods VALUES(1,'펫 피트니스 로봇','90000','너도나도좋아하는친구','petrobot.JPG');
 
+--==============================================테이블에 제약조건 추가하기
+alter table review add primary key(RV_NUM); -- pk 추가 
+alter table Review add FOREIGN KEY (C_NUM) REFERENCES Clinic(C_NUM); --fk 추가
+alter table Review add FOREIGN KEY (H_NUM) REFERENCES Hotel(H_NUM); --fk 추가
+alter table Review add Foreign Key (ID) references memberpet(id); --fk 추가
+alter table Cart add foreign key(GBSNUM) references goods(GBSNUM); --fk 추가
+
 --==============================================테이블 자료형 크기 변경
 ALTER TABLE playplace MODIFY (p_location VARCHAR2(500)); 
 ALTER TABLE playplace MODIFY (open_hour VARCHAR2(500)); 
