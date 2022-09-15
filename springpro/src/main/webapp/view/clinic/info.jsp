@@ -9,7 +9,7 @@
    href="<%=request.getContextPath()%>/assets/css/hotel_info.css" />
 
 <script type="text/javascript"
-   src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9ce7b45f5d2c8595e8ff85665c67a774&libraries=services,clusterer,drawing"></script>
+   src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ë°œê¸‰ë°›ì€ì•±í‚¤&libraries=services,clusterer,drawing"></script>
 
 <body class="bodysize">
    <div style="text-align: center;">
@@ -36,42 +36,42 @@
 
                <a href="" class="project" target="" data-type="">
                   <div id="map" style="width: 420px; height: 350px;"></div> <script>
-                            var mapContainer = document.getElementById('map'), // Áöµµ¸¦ Ç¥½ÃÇÒ div 
+                            var mapContainer = document.getElementById('map'), // ì§€ë„ë¥¼ í‘œì‹œí•  div 
                             mapOption = {
                                 center : new kakao.maps.LatLng(33.450701,
-                                        126.570667), // ÁöµµÀÇ Áß½ÉÁÂÇ¥
+                                        126.570667), // ì§€ë„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
                                 level : 3
-                            // ÁöµµÀÇ È®´ë ·¹º§
+                            // ì§€ë„ì˜ í™•ëŒ€ ë ˆë²¨
                             };
 
-                            // Áöµµ¸¦ »ı¼ºÇÕ´Ï´Ù    
+                            // ì§€ë„ë¥¼ ìƒì„±í•©ë‹ˆë‹¤    
                             var map = new kakao.maps.Map(mapContainer,
                                     mapOption);
 
-                            // ÁÖ¼Ò-ÁÂÇ¥ º¯È¯ °´Ã¼¸¦ »ı¼ºÇÕ´Ï´Ù
+                            // ì£¼ì†Œ-ì¢Œí‘œ ë³€í™˜ ê°ì²´ë¥¼ ìƒì„±í•©ë‹ˆë‹¤
                             var geocoder = new kakao.maps.services.Geocoder();
 
-                            // ÁÖ¼Ò·Î ÁÂÇ¥¸¦ °Ë»öÇÕ´Ï´Ùzcczcxzc
+                            // ì£¼ì†Œë¡œ ì¢Œí‘œë¥¼ ê²€ìƒ‰í•©ë‹ˆë‹¤zcczcxzc
                             geocoder
                                     .addressSearch(
                                             '${clinic.c_location}',
                                             function (result, status) {
 
-                                                // Á¤»óÀûÀ¸·Î °Ë»öÀÌ ¿Ï·áµÆÀ¸¸é 
+                                                // ì •ìƒì ìœ¼ë¡œ ê²€ìƒ‰ì´ ì™„ë£Œëìœ¼ë©´ 
                                                 if (status === kakao.maps.services.Status.OK) {
 
                                                     var coords = new kakao.maps.LatLng(
                                                             result[0].y,
                                                             result[0].x);
 
-                                                    // °á°ú°ªÀ¸·Î ¹ŞÀº À§Ä¡¸¦ ¸¶Ä¿·Î Ç¥½ÃÇÕ´Ï´Ù
+                                                    // ê²°ê³¼ê°’ìœ¼ë¡œ ë°›ì€ ìœ„ì¹˜ë¥¼ ë§ˆì»¤ë¡œ í‘œì‹œí•©ë‹ˆë‹¤
                                                     var marker = new kakao.maps.Marker(
                                                             {
                                                                 map : map,
                                                                 position : coords
                                                             });
 
-                                                    // ÀÎÆ÷À©µµ¿ì·Î Àå¼Ò¿¡ ´ëÇÑ ¼³¸íÀ» Ç¥½ÃÇÕ´Ï´Ù
+                                                    // ì¸í¬ìœˆë„ìš°ë¡œ ì¥ì†Œì— ëŒ€í•œ ì„¤ëª…ì„ í‘œì‹œí•©ë‹ˆë‹¤
                                                     var infowindow = new kakao.maps.InfoWindow(
                                                             {
                                                                 content : '<div style="width:150px;text-align:center;padding:6px 0;">${clinic.c_name}</div>'
@@ -79,7 +79,7 @@
                                                     infowindow
                                                             .open(map, marker);
 
-                                                    // ÁöµµÀÇ Áß½ÉÀ» °á°ú°ªÀ¸·Î ¹ŞÀº À§Ä¡·Î ÀÌµ¿½ÃÅµ´Ï´Ù
+                                                    // ì§€ë„ì˜ ì¤‘ì‹¬ì„ ê²°ê³¼ê°’ìœ¼ë¡œ ë°›ì€ ìœ„ì¹˜ë¡œ ì´ë™ì‹œí‚µë‹ˆë‹¤
                                                     map.setCenter(coords);
                                                 }
                                             });
@@ -95,13 +95,13 @@
                   </h3>
                   <ul>
 
-                     <li style="text-align: left; margin-left: -30px;">È£ÅÚÀ§Ä¡:
+                     <li style="text-align: left; margin-left: -30px;">í˜¸í…”ìœ„ì¹˜:
                         ${clinic.c_location}</li>
-                     <li style="text-align: left; margin-left: -30px;">È£ÅÚ ÀüÈ­ ¹øÈ£:
+                     <li style="text-align: left; margin-left: -30px;">í˜¸í…” ì „í™” ë²ˆí˜¸:
                         ${clinic.c_tel}</li>
-                     <li style="text-align: left; margin-left: -30px;">${clinic.park==1?'ÁÖÂ÷ °¡´É':'ÁÖÂ÷ ºÒ°¡´É'}</li>
-                     <li style="text-align: left; margin-left: -30px;">${clinic.reserve==1?'¿¹¾à °¡´É':'¿¹¾à ºÒ°¡´É'}</li>
-                     <li style="text-align: left; margin-left: -30px;">¿î¿µ½Ã°£: ${clinic.open_hour}</li>
+                     <li style="text-align: left; margin-left: -30px;">${clinic.park==1?'ì£¼ì°¨ ê°€ëŠ¥':'ì£¼ì°¨ ë¶ˆê°€ëŠ¥'}</li>
+                     <li style="text-align: left; margin-left: -30px;">${clinic.reserve==1?'ì˜ˆì•½ ê°€ëŠ¥':'ì˜ˆì•½ ë¶ˆê°€ëŠ¥'}</li>
+                     <li style="text-align: left; margin-left: -30px;">ìš´ì˜ì‹œê°„: ${clinic.open_hour}</li>
                      
                   </ul>
                </a>
@@ -121,7 +121,7 @@
          </tr>
       </table>
    </div>
-   <%-- <li>¸®ºä ³»¿ë : ${review.rv_desc}</li> --%>
+   <%-- <li>ë¦¬ë·° ë‚´ìš© : ${review.rv_desc}</li> --%>
 
 </c:forEach>
 </div>
