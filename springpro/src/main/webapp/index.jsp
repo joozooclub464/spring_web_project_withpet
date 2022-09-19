@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>With.pet`</title>
+<title>With.pet</title>
 <meta charset="EUC-KR">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
