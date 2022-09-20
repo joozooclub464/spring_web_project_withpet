@@ -181,6 +181,7 @@ ALTER TABLE playplace MODIFY (p_location VARCHAR2(500));
 ALTER TABLE playplace MODIFY (open_hour VARCHAR2(500)); 
 ALTER TABLE playplace MODIFY (content VARCHAR2(700)); 
 ALTER TABLE playplace MODIFY (p_img6 VARCHAR2(300));
+ALTER TABLE reserveclinic MODIFY (c_name VARCHAR2(300));
 --==============================================테이블 삭제용
 drop table reserveclinic;
 drop table reservehotel;
