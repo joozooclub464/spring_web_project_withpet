@@ -176,6 +176,8 @@ alter table Review add FOREIGN KEY (H_NUM) REFERENCES Hotel(H_NUM); --fk 추가
 alter table Review add Foreign Key (ID) references memberpet(id); --fk 추가
 alter table Cart add foreign key(GBSNUM) references goods(GBSNUM); --fk 추가
 
+--==============================================테이블 컬럼 삭제
+ALTER TABLE hotel DROP COLUMN room_kind;
 --==============================================테이블 컬럼 추가
 alter table hotel add room_kind1 varchar2(300);
 alter table hotel add room_kind2 varchar2(300);
