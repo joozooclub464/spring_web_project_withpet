@@ -5,11 +5,11 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="EUC-KR" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
-    <title>Nav bar</title>
+    <title>With.pet</title>
     <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
     <script src="<%=request.getContextPath()%>/assets/js/main.js" defer></script>
 </head>
@@ -31,7 +31,11 @@
             <li><a href="<%=request.getContextPath()%>/play/list?playid=1">Play</a></li>
             <li><a href="<%=request.getContextPath()%>/clinic/list">Care</a></li>
             <li><a href="<%=request.getContextPath()%>/board/list">Board</a></li>
-            <li><a href="<%=request.getContextPath()%>/goods/list">Goods</a></li>            
+            <li><a href="<%=request.getContextPath()%>/goods/list">Goods</a></li>   
+            <c:if test="${id ne null}">
+				<li><a href="<%=request.getContextPath()%>/cart/cartlist">Cart</a></li>
+				<li><a href="<%=request.getContextPath()%>/member/myPage">MyPage</a></li>
+			</c:if>         
         </ul>
         <!-- Icons -->
         <ul class="navbar__icons">

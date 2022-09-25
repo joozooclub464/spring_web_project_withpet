@@ -12,7 +12,7 @@
 
 		<div>
 			<p class="contact__rights">
-				(유)위드펫<br /> 서울특별시 강남구 테헤란로1길 10 세경빌딩 3층 | 대표자 : ss0n9 | 사업자등록번호 :
+				(유)위드펫<br /> 서울특별시 강남구 언주로 508 14층 | 대표자 : ss0n9 | 사업자등록번호 :
 				211-29-99102 | 통신판매업신고:제 2018-서울강남-2635호 | 개인정보담당자 :
 				privacy@woohaha.co.kr <br />| 제휴문의 : partnership@woohaha.co.kr |
 				고객만족센터 : loveyou@withpet.co.kr | 호스팅 제공자: 위드펫 주식회사
