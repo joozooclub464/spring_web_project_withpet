@@ -2,3 +2,4 @@
 
 Spring Web Project with 4 people in Campus. We have used Spring Framework, Mybatis, JSP etc. Our goal was making a web site which provides shops, play place, clinics, hotels with pets' information and reservation service.
 
+hi i m minki
