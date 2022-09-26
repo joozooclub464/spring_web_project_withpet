@@ -7,9 +7,12 @@
 <meta charset="EUC-KR" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>REVIEW_PAGE_ss0n9version</title>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/review_form.css" />
-<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet" />
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/assets/css/review_form.css" />
+<script src="https://kit.fontawesome.com/51db22a717.js"
+	crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+	rel="stylesheet" />
 </head>
 
 
@@ -25,8 +28,8 @@
 	<div>
 		<form action="review" method="post" class="loginForm">
 			<input type="text" name="id" value="${review.id}" readonly> <input
-				type="text" name="h_num" value="${review.h_num}" readonly> <br />
-			<h2>${hotel.h_name}</h2>
+				type="text" name="c_num" value="${review.c_num}" readonly> <br />
+			<h2>${clinic.c_name}</h2>
 			<br />
 			<textarea name="rv_desc" cols="45" rows="20"
 				style="border: 1px solid #eeeeee;"> </textarea>

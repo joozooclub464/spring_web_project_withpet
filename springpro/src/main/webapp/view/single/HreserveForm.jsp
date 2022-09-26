@@ -1,21 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<title>RESERVATION_PAGE_ss0n9version</title>
 
-<title>RESERVATION_PAGE_ANDYversion</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/reserve_copy.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet" href="C:\Users\andya\Documents\Ä«Ä«¿ÀÅå ¹ŞÀº ÆÄÀÏ\clinic\css\main.css"> -->
 
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/assets/css/reserve_copy.css" />
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- <link rel="stylesheet" href="C:\Users\andya\Documents\ì¹´ì¹´ì˜¤í†¡ ë°›ì€ íŒŒì¼\clinic\css\main.css"> -->
-
-
+<script>
+/* var selectBoxChange = function(value){
+	console.log("°ª º¯°æ Å×½ºÆ®: " + value);
+	$("#changeInput").val(value);
+} */
+$(document).ready(function() {
+	$("#choose_room").change(function() {
+		console.log("°ª º¯°æ Å×½ºÆ®:"+$(this).val());
+		$("#room_kind").val($(this).val());
+	});
+});
+</script>
 <div class="is-preload">
 
 	<!-- Wrapper -->
@@ -35,29 +41,40 @@
 					<form action="reserve" name="f" method="post">
 						<div class="row">
 							<div class="col-6 col-12-small andysize">
-								<h3>ìš”ì²­ì‚¬í•­</h3>
-								<input type="text" name="content"> <input type="hidden"
-									name="h_name" value="${hotel.h_name}"> <input
-									type="hidden" name="h_num" value="${hotel.h_num}"> <input
-									type="hidden" name="h_tel" value="${hotel.h_tel}">
+								<h3>¿äÃ»»çÇ×</h3>
+								<input type="text" name="content"> 
+								<input type="hidden" name="h_name" value="${hotel.h_name}"> 
+								<input type="hidden" name="h_num" value="${hotel.h_num}"> 
+								<input type="hidden" name="h_tel" value="${hotel.h_tel}">
 								<!-- <div>
-                                <input type="text" placehoder="ê²€ìƒ‰ì–´ ì…ë ¥">
-                                <button>ê²€ìƒ‰</button>
+                                <input type="text" placehoder="°Ë»ö¾î ÀÔ·Â">
+                                <button>°Ë»ö</button>
+								</div> -->
 
-                            </div> -->
-
+								
 								<!-- <div class="dropdown">
-									<button class="dropbtn">íƒ€ì…</button>
+									<button class="dropbtn">¹æ Á¾·ù</button>
 									<div class="dropdown-content">
-										<a href="#">í•­ëª©2</a> <a href="#">í•­ëª©3</a> <a href="#">í•­ëª©4</a> <a
-											href="#">í•­ëª©5</a>
+										<a href="#">Ç×¸ñ2</a> 
+										<a href="#">Ç×¸ñ3</a> 
+										<a href="#">Ç×¸ñ4</a> 
+										<a href="#">Ç×¸ñ5</a>
 											
 									</div>
 								</div> -->
+								¹æ Á¾·ù
+								<select id="choose_room">
+									<option>¹æ Á¾·ù¸¦ ¼±ÅÃÇÏ¼¼¿ä</option>
+									<option value="room_kind1">${hotel.room_kind1}</option>
+									<option value="room_kind2">${hotel.room_kind2}</option>
+									<option value="room_kind3">${hotel.room_kind3}</option>
+									<option value="room_kind4">${hotel.room_kind4}</option>
+									<option value="room_kind5">${hotel.room_kind5}</option>
+								</select>
+								<input type="hidden" id="room_kind" name="room_kind"/>
+								<!-- <input type="text" name="room_kind"> -->
 
-								ë°© ì¢…ë¥˜ <input type="text" name="room_kind">
-
-								<h3>ì˜ˆì•½ì¼ì</h3>
+								<h3>¿¹¾àÀÏÀÚ</h3>
 								<p>
 									<input type="date" name="s_date">
 								</p>
@@ -69,19 +86,23 @@
 							</div>
 							<div class="col-6 col-12-small">
 								<input type="hidden" name="id" value="${member.id}">
-								NAME<br> <input class="box__andy" type="text" name="name"
-									value="${member.name}"> <br>How many people?<br>
-								<input type="text" name="num"> <br>Pet's kind<br>
+									NAME<br> 
+								<input class="box__andy" type="text" name="name" value="${member.name}"> 
+									<br>How many people?<br>
+								<input type="text" name="num"> 
+									<br>Pet's kind<br>
 								<input type="text" name="pet_kind" value="${member.pet_kind}">
-								<br>How many pets?<br> <input type="text"
-									name="pet_num">
-								<!-- ì˜ˆì•½ í›„ í™•ì¸ ë²„íŠ¼ì´ ìˆ˜ì •, ì·¨ì†Œ ë²„íŠ¼ìœ¼ë¡œ ë°”ë€œ -->
+									<br>How many pets?<br> 
+								<input type="text" name="pet_num">
+								<!-- ¿¹¾à ÈÄ È®ÀÎ ¹öÆ°ÀÌ ¼öÁ¤, Ãë¼Ò ¹öÆ°À¸·Î ¹Ù²ñ -->
 								<input type="submit" value="Submit">
 
 							</div>
+						</div>
 					</form>
 				</div>
 				<hr class="major" />
+			</section>
 		</div>
 
 		<!-- Scripts -->

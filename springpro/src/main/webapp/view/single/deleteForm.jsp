@@ -1,10 +1,10 @@
 <%@page import="dao.MemberDaoMybatis"%>
 <%@page import="mybatis.Member"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/delete_2.css" />
@@ -32,7 +32,7 @@
             <br />
         </div>
         <div style="color: gray">
-            ë‹¹ì‹ ì˜ í–‰ë³µì´ í•¨ê»˜í•˜ëŠ” ì—¬í–‰, ìœ„ë“œíŽ«<br />ìš°ë¦¬ëŠ” ë‹¹ì‹ ì˜ í–‰ë³µì„ ì§€ì§€í•©ë‹ˆë‹¤&nbsp;&nbsp;: )
+            ´ç½ÅÀÇ Çàº¹ÀÌ ÇÔ²²ÇÏ´Â ¿©Çà, À§µåÆê<br />¿ì¸®´Â ´ç½ÅÀÇ Çàº¹À» ÁöÁöÇÕ´Ï´Ù&nbsp;&nbsp;: )
             <br />
         </div>
     </form>

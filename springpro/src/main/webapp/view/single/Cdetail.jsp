@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
 
-<title>RESERVATION_PAGE_ANDYversion</title>
+<title>RESERVATION_PAGE_ss0n9version</title>
 
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -13,16 +13,21 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- <link rel="stylesheet" href="C:\Users\andya\Documents\ì¹´ì¹´ì˜¤í†¡ ë°›ì€ íŒŒì¼\clinic\css\main.css"> -->
+<!-- <link rel="stylesheet" href="C:\Users\andya\Documents\Ä«Ä«¿ÀÅå ¹ŞÀº ÆÄÀÏ\clinic\css\main.css"> -->
 
 <script>
-	function cancel(rc_num) {
-		if (confirm("ì˜ˆì•½ì„ ì·¨ì†Œí•˜ê² ìŠµë‹ˆê¹Œ?")) {
-			location.href = "cancel?rc_num=" + rc_num;
-		}
-		self.close();
+function cancel(rc_num) {
+	if (confirm("¿¹¾àÀ» Ãë¼ÒÇÏ°Ú½À´Ï±î?")) {
+		location.href = "cancel?rc_num=" + rc_num;
 	}
+	self.close();
+}
+/* 220920Ãß°¡ */
+function edit(rc_num) {
+	location.href = "<%=request.getContextPath()%>/reserveClinic/editForm?rc_num=" + rc_num;
+}
 </script>
+
 <div class="is-preload">
 
 	<!-- Wrapper -->
@@ -41,7 +46,7 @@
 					<!-- Content -->
 					<div class="row">
 						<div class="col-6 col-12-small andysize">
-							<h3>ìš”ì²­ì‚¬í•­</h3>
+							<h3>¿äÃ»»çÇ×</h3>
 							<input type="hidden" name="problem"
 								value="${reserveClinic.problem}">${reserveClinic.problem}<br />
 							<br /> <input type="hidden" name="c_name"
@@ -49,21 +54,21 @@
 								name="c_num" value="${reserveClinic.c_num}"> <input
 								type="hidden" name="c_tel" value="${reserveClinic.c_tel}">
 							<!-- <div>
-                                <input type="text" placehoder="ê²€ìƒ‰ì–´ ì…ë ¥">
-                                <button>ê²€ìƒ‰</button>
+                                <input type="text" placehoder="°Ë»ö¾î ÀÔ·Â">
+                                <button>°Ë»ö</button>
 
                             </div> -->
 
 							<!-- <div class="dropdown">
-									<button class="dropbtn">íƒ€ì…</button>
+									<button class="dropbtn">Å¸ÀÔ</button>
 									<div class="dropdown-content">
-										<a href="#">í•­ëª©2</a> <a href="#">í•­ëª©3</a> <a href="#">í•­ëª©4</a> <a
-											href="#">í•­ëª©5</a>
+										<a href="#">Ç×¸ñ2</a> <a href="#">Ç×¸ñ3</a> <a href="#">Ç×¸ñ4</a> <a
+											href="#">Ç×¸ñ5</a>
 											
 									</div>
 								</div> -->
 
-							<h3>ì˜ˆì•½ì¼ì</h3>
+							<h3>¿¹¾àÀÏÀÚ</h3>
 							<p>
 								<input type="hidden" name="date1" value="${reserveClinic.date1}">${reserveClinic.date1}
 							</p>
@@ -83,9 +88,10 @@
 								value="${reserveClinic.pet_name}">${reserveClinic.pet_name}<br>Pet's
 							age<br> <input type="hidden" name="pet_age"
 								value="${reserveClinic.pet_age}">${reserveClinic.pet_age}
-							<br /> <br /> <br /> <br /> <a
-								href="editForm?rc_num=${reserveClinic.rc_num}">ì˜ˆì•½ìˆ˜ì •</a> <a
-								href="javascript:cancel('${reserveClinic.rc_num}')">ì˜ˆì•½ì·¨ì†Œ</a>
+							<br /> <br /> <br /> <br /> 
+							<%-- <a href="<%=request.getContextPath()%>/reserveClinic/editForm?rc_num=${reserveClinic.rc_num}">¿¹¾à¼öÁ¤</a> --%>
+							<a href="javascript:edit('${reserveClinic.rc_num}')">¿¹¾à¼öÁ¤</a>
+							<a href="javascript:cancel('${reserveClinic.rc_num}')">¿¹¾àÃë¼Ò</a>
 
 						</div>
 
