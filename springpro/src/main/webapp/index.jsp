@@ -95,48 +95,21 @@
 			</div>
 			<div>
 				<div class="work__projects">
-					<c:if test="${h_rank_list ne null}">
-						<c:forEach var="hotel" items="${h_rank_list}">
-							<a
-								href="<%=request.getContextPath()%>/hotel/info?h_num=${hotel.h_num}"
-								class="project" data-type="front-end"> <img
-								src="<%=request.getContextPath()%>/img/${hotel.picture}"
-								alt="Youtube" class="project__img" />
-								<div class="project__description">
-									<h3>${hotel.h_name}</h3>
-									<span>${hotel.h_location}</span>
-								</div>
-							</a>
-						</c:forEach>
-					</c:if>
-					<c:if test="${p_rank_list ne null}">
-						<c:forEach var="playplace" items="${p_rank_list}">
-							<a
-								href="<%=request.getContextPath()%>/play/info?p_num=${playplace.p_num}"
-								class="project" data-type="front-end"> <img
-								src="<%=request.getContextPath()%>/img/${playplace.p_img1}"
-								alt="Youtube" class="project__img" />
-								<div class="project__description">
-									<h3>${playplace.p_name}</h3>
-									<span>${playplace.p_location}</span>
-								</div>
-							</a>
-						</c:forEach>
-					</c:if>
-					<c:if test="${c_rank_list ne null}">
-						<c:forEach var="clinic" items="${c_rank_list}">
-							<a
-								href="<%=request.getContextPath()%>/clinic/info?c_num=${clinic.c_num}"
-								class="project" data-type="front-end"> <img
-								src="<%=request.getContextPath()%>/img/${clinic.picture}"
-								alt="Youtube" class="project__img" />
-								<div class="project__description">
-									<h3>${clinic.c_name}</h3>
-									<span>${clinic.c_location}</span>
-								</div>
-							</a>
-						</c:forEach>
-					</c:if>
+				<!-- 처음 열었을때 -->
+				<c:if test="${p_rank_list ne null}">
+					<c:forEach var="playplace" items="${p_rank_list}">
+						<a href="<%=request.getContextPath()%>/play/info?p_num=${playplace.p_num}"
+							class="project" data-type="front-end"> <img
+							src="<%=request.getContextPath()%>/img/${playplace.p_img1}"
+							alt="Youtube" class="project__img" />
+							<div class="project__description">
+								<h3>${playplace.p_name}</h3>
+								<span>${playplace.p_location}</span>
+							</div>
+						</a>
+					</c:forEach>
+				</c:if>
+					
 				</div>
 			</div>
 		</div>
@@ -231,32 +204,32 @@
 		</div>
 	</section>
 	<!-- Contact -->
-	<section id="contact" class="section bot">
-		<div class="company">
-			<img src="<%=request.getContextPath()%>/img/logo_withpet.png"
-				alt="logo__withpet" class="brand__logo" />
+<section id="contact" class="section bot">
+	<div class="company">
+		<img src="<%=request.getContextPath()%>/img/logo_withpet.png" alt="logo__withpet"
+			class="brand__logo" />
 
-			<div>
-				<p class="contact__rights">
-					(유)위드펫<br /> 서울특별시 강남구 테헤란로1길 10 세경빌딩 3층 | 대표자 : ss0n9 | 사업자등록번호 :
-					211-29-99102 | 통신판매업신고:제 2018-서울강남-2635호 | 개인정보담당자 :
-					privacy@woohaha.co.kr <br />| 제휴문의 : partnership@woohaha.co.kr |
-					고객만족센터 : loveyou@withpet.co.kr | 호스팅 제공자: 위드펫 주식회사
-				</p>
-			</div>
+		<div>
+			<p class="contact__rights">
+				(유)위드펫<br /> 서울특별시 강남구 언주로 508 14층 | 대표자 : ss0n9 | 사업자등록번호 :
+				211-29-99102 | 통신판매업신고:제 2018-서울강남-2635호 | 개인정보담당자 :
+				privacy@woohaha.co.kr <br />| 제휴문의 : partnership@woohaha.co.kr |
+				고객만족센터 : loveyou@withpet.co.kr | 호스팅 제공자: 위드펫 주식회사
+			</p>
 		</div>
-		<div class="company__body">
-			<div></div>
-			<div>
-				<p class="contact__bottom">
-					<br /> (유)위드펫은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품/ 거래정보 및 거래와 관련하여
-					치킨의민족에 등록된 판매자의 고의 또는 과실로 소비자에게 발생하는 손해에 대해 (유)위드펫은 책임을 지지 않습니다. 상품
-					및 거래에 관하여 보다 정확한 정보는 해당 판매자에게 직접 확인하여 주시기 바랍니다. <br /> Copyright
-					WOOHAHA. All Rights Reserved.
-				</p>
-			</div>
+	</div>
+	<div class="company__body">
+		<div></div>
+		<div>
+			<p class="contact__bottom">
+				<br /> (유)위드펫은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품/ 거래정보 및 거래와 관련하여
+				치킨의민족에 등록된 판매자의 고의 또는 과실로 소비자에게 발생하는 손해에 대해 (유)위드펫은 책임을 지지 않습니다. 상품
+				및 거래에 관하여 보다 정확한 정보는 해당 판매자에게 직접 확인하여 주시기 바랍니다. <br /> Copyright
+				WOOHAHA. All Rights Reserved.
+			</p>
 		</div>
-	</section>
+	</div>
+</section>
 	</div><!--  -->
 </body>
 <!-- Main -->
