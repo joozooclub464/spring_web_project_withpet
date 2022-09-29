@@ -6,13 +6,9 @@
 <head>
 <meta charset="EUC-KR">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet"
-   href="<%=request.getContextPath()%>/assets/css/board.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/board.css" />
 
-   
-
-
-	<div id="banner" class="main">11</div>
+   <div id="banner" class="main">11</div>
 
 	<div class="content__2">
 		<div class="content__desc" style="padding: 0px 50px 0px 0px">

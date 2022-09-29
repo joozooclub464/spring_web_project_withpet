@@ -8,8 +8,7 @@
 
 <div id="bodystyle" class="bodystyle">
 
-
-   <div class="content">
+	<div class="content">
       <form action="delete" name="f" method="post">
          <input type="hidden" name="b_num" value="${b_num}">
          <table>

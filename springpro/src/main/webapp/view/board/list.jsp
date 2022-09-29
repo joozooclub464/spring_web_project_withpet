@@ -3,11 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/assets/css/board.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/board.css" />
 
 <div>
-
 	<div id="banner" class="main">11</div>
 
 	<div class="content__2">
@@ -109,10 +107,7 @@
 							<a href="list?page=${startpage + bottomLine}">[¥Ÿ¿Ω]</a>
 						</c:if></td>
 				</tr>
-
-
 			</c:if>
-
 
 			<tr>
 				<td colspan="6" style="text-align: right"><a

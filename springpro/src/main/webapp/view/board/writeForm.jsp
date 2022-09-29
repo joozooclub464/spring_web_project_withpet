@@ -2,9 +2,7 @@
 	pageEncoding="EUC-KR"%>
 <%-- /WebContent/model1/board/writeForm.jsp --%>
 
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/assets/css/board.css" />
-
+<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/board.css" />
 
 <div id="banner" class="main">11</div>
 

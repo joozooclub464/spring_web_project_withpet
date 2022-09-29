@@ -13,8 +13,7 @@ function like1(b_num) {
 }
 </script>
 
-<link rel="stylesheet"
-   href="<%=request.getContextPath()%>/assets/css/board.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/board.css" />
 
 <div>
 
