@@ -2,24 +2,18 @@
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/assets/css/basket.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/basket.css" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-	
-	$(function(){
-			$("#btnList").click(function(){
-				location.herf="<%=request.getContextPath()%>
-	/goods/list";
-			String
-			msg = "";
-			msg = "주문을 성공하였습니다.";
-		});
+$(function() {
+	$("#btnList").click(function(){
+		alert("주문을 성공하였습니다.");
+	<%-- location.href="<%=request.getContextPath()%>/goods/list"; --%>
 	});
+});
 </script>
-
 
 <br/>
 <br/>
@@ -36,19 +30,16 @@
 <div class="work__projects">
 				<c:forEach var="cart" items="${list}">
 						<div class="project">
-							<img src="<%=request.getContextPath()%>/img/${cart.picture}"
-								class="project__img" />
+							<img src="<%=request.getContextPath()%>/img/${cart.picture}" class="project__img" />
 
 							<div class="project_desc">
 								<div>${cart.gbsName}</div>
 								<br/>
 								<div>
-									<div><input type="number" style="width: 40px" name="cartStock"
-										value="${cart.cartStock}" min="1"> <input
-										type="hidden" name="gbsNum" value="${cart.gbsName }">
-									&nbsp;
-									<fmt:formatNumber pattern="###,###,###"
-										value="${cart.gbsPrice * cart.cartStock}" /></div>
+									<div>
+									<input type="number" style="width: 40px" name="cartStock" value="${cart.cartStock}" min="1"> 
+									<input type="hidden" name="gbsNum" value="${cart.gbsName }"> &nbsp;
+									<fmt:formatNumber pattern="###,###,###" value="${cart.gbsPrice * cart.cartStock}" /></div>
 									<br/>
 									<div><a href="delete?cartId=${cart.cartId}">삭제</a></div>
 								</div>
@@ -69,9 +60,8 @@
 	</div>
 </div>
 	<div class="fff">
-	<a href="<%=request.getContextPath()%>/goods/list">계속쇼핑하기</a> <a
-		href="<%=request.getContextPath()%>/goods/list">주문하기 </a>
-
+	<a href="<%=request.getContextPath()%>/goods/list">계속쇼핑하기</a>
+	<a href="<%=request.getContextPath()%>/goods/list" id="btnList">주문하기</a>
 </div>
 </div>
 <br/>
