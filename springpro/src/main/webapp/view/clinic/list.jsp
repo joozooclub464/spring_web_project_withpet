@@ -1,13 +1,11 @@
 <%@page import="dao.ClinicDaoMybatis"%>
 <%@page import="mybatis.Clinic"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<meta charset="UTF-8" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/assets/css/playpet copy.css" />
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<meta charset="EUC-KR" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/playpet copy.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- 드롭다운 css -->
 <script src="playpet.js" defer></script>
