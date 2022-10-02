@@ -27,24 +27,25 @@
 </script>
 <!-- Container (Contact Section) -->
 <div id="contact_gbs" class="container">
-	<form action="regist" method="post" enctype="multipart/form-data"
-		class="goods_form" name="f">
+	<form action="regist" method="post" enctype="multipart/form-data" class="goods_form" name="f">
 		<div class="row">
 			<div class="col-md-8-center">
 				<div class="row">
 					<div class="col-sm-8 form-group">
-						<label for="gbsImg">상품 이미지</label> <input type="hidden"
-							name="picture" value=""> <img src="" width="100"
-							height="120" id="pic"><br> <font size="1"><a
-							href="javascript:win_upload()">사진등록</a></font>
+						<label for="gbsImg">상품 이미지</label> 
+						<input type="hidden" name="picture" value=""> 
+						<img src="" width="100" height="120" id="pic"><br> 
+						<font size="1">
+							<a href="javascript:win_upload()">사진등록</a>
+						</font>
 					</div>
 					<div class="col-sm-8 form-group">
-						<label for="gdsName">상품명</label> <input class="form-control"
-							id="gbsName" name="gbsName" type="text" value="">
+						<label for="gdsName">상품명</label> 
+						<input class="form-control" id="gbsName" name="gbsName" type="text" value="">
 					</div>
 					<div class="col-sm-8 form-group">
-						<label for="gdsPrice">상품가격</label> <input class="form-control"
-							id="gbsPrice" name="gbsPrice" type="text" value="">
+						<label for="gdsPrice">상품가격</label> 
+						<input class="form-control" id="gbsPrice" name="gbsPrice" type="text" value="">
 					</div>
 
 				</div>

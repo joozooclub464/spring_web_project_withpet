@@ -53,8 +53,9 @@ margin-right:auto;
 									<c:forEach begin="1" end="10" var="i">
 										<option value=${i}>${i}</option>
 									</c:forEach>
-								</select>&nbsp;개 <input type="submit" value="장바구니에 담기">
-							</form> 
+								</select>&nbsp;개 
+								<input type="submit" value="장바구니에 담기">
+							</form>
 				</table>
 	</table>
 	<a href="<%=request.getContextPath()%>/goods/list"><h2>상품목록</h2></a>
