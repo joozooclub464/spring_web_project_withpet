@@ -2,20 +2,18 @@
    pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<meta charset="utf-8">
+<meta charset="EUC-KR">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet"
    href="<%=request.getContextPath()%>/assets/css/hotel_info.css" />
 
-
 <script type="text/javascript"
-   src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9ce7b45f5d2c8595e8ff85665c67a774&libraries=services,clusterer,drawing"></script>
+   src="//dapi.kakao.com/v2/maps/sdk.js?appkey=381b7bef7ae9fa02ccc12e081a8fa829&libraries=services,clusterer,drawing"></script>
 
 <body class="bodysize">
    <div style="text-align: center;">
-      <img src="<%=request.getContextPath()%>/img/${hotel.picture}"
-         class="andytest" />
+      <img style="width:1000px;height:600px;background-size:cover;background-position:center;"src="<%=request.getContextPath()%>/img/${hotel.picture}" class="andytest" />
    </div>
    <section id="searchbar" class=searchbar__section>
       <div class="searchbar__box">
@@ -34,13 +32,12 @@
 
          <div>
             <div class="work__projects">
-
                <a href="" class="project" target="" data-type="">
                   <div id="map" style="width: 420px; height: 350px;"></div> <script>
                             var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
                             mapOption = {
-                                center : new kakao.maps.LatLng(33.450701,
-                                        126.570667), // 지도의 중심좌표
+                                center : new kakao.maps.LatLng(37.4713372,
+                                		129.1638649), // 지도의 중심좌표
                                 level : 3
                             // 지도의 확대 레벨
                             };
@@ -52,7 +49,7 @@
                             // 주소-좌표 변환 객체를 생성합니다
                             var geocoder = new kakao.maps.services.Geocoder();
 
-                            // 주소로 좌표를 검색합니다zcczcxzc
+                            // 주소로 좌표를 검색합니다
                             geocoder
                                     .addressSearch(
                                             '${hotel.h_location}',
@@ -85,10 +82,7 @@
                                                 }
                                             });
                         </script>
-                  <div class="project__description">
-                     <h3>BOOKING NOW</h3>
-                     <span>Stay with ur story</span>
-                  </div>
+               
                </a> <a class="project_desc" data-type="front-end" target="blank">
                   <!-- <img class="project__img" src="img/a1.JPG" alt="navbar" /> -->
                   <h3 style="text-align: left; margin-left: -30px;">

@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<meta charset="UTF-8" />
+<meta charset="EUC-KR" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet"
@@ -26,27 +26,25 @@
 		</h3>
 	</c:if>
 </div>
-
 <br />
 
 <div class="title">
 	<h2 style="text-align: center;">Hotel with your pets</h2>
 </div>
-
 <br />
 <br />
 
 <c:forEach var="hotel" items="${list}">
 	<div class="work__projects">
-		
-		<a href="info?h_num=${hotel.h_num}" class="project"
-			data-type="front-end"> <img src="<%=request.getContextPath()%>/img/${hotel.picture}" width=380px height=350px alt="Youtube"
+		<a href="info?h_num=${hotel.h_num}" class="project" data-type="front-end"> 
+		<img src="<%=request.getContextPath()%>/img/${hotel.picture}" width=380px height=350px alt="Youtube"
 			class="project__img" />
 			<div class="project__description">
 				<h3>${hotel.h_name}</h3>
 				<span>Stay with your love</span>
 			</div>
-		</a> <a class="project_desc" data-type="front-end" target="blank">
+		</a> 
+		<a class="project_desc" data-type="front-end" target="blank">
 			<h3 style="text-align: left;">
 				<br>${hotel.h_name}<br> <br> <br>
 			</h3>
