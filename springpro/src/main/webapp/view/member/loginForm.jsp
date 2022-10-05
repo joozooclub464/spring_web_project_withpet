@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-
-
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/login.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/login.css" />
 
     <div class="page-container">
         <div class="login-form-container shadow">
