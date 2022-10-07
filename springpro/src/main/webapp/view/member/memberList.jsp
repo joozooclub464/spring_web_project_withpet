@@ -5,10 +5,8 @@
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/assets/css/hotel.css">
-
 <script type="text/javascript">
 	function del(id) {
 		if (confirm(id + "´ÔÀ» Å»ÅðÇÏ½Ã°Ú½À´Ï±î?")) {
@@ -16,7 +14,6 @@
 		}
 	}
 </script>
-
 
 <body>
 <h3>¸â¹ö ¸®½ºÆ®</h3>
@@ -40,8 +37,8 @@
 				<td class="hotel_td">${m.birthday}</td>
 				<td class="hotel_td">${m.tel}</td>
 				<td class="hotel_td">${m.address}</td>
-				<td class="hotel_td"><a href="updateForm?id=${m.id}">[¼öÁ¤]</a> <c:if
-						test="${m.id ne 'admin'}">
+				<td class="hotel_td"><a href="updateForm?id=${m.id}">[¼öÁ¤]</a> 
+					<c:if test="${m.id ne 'admin'}">
 						<%--<a href="12_delete?id=${m.id}">[°­Á¦Å»Åð]</a> --%>
 						<a href="javascript:del('${m.id}')">[°­Á¦Å»Åð]</a>
 					</c:if></td>

@@ -55,8 +55,9 @@
 
 			<div class="join__img">
 				<img src="<%=request.getContextPath()%>/img/${member.picture}"
-					width="100" height="120" id="pic"><br> <font size="1"><a
-					href="javascript:win_upload()">사진수정</a></font>
+					width="100" height="120" id="pic"><br> 
+					<font size="1">
+					<a href="javascript:win_upload()">사진수정</a></font>
 			</div>
 
 			<!-- ID -->
@@ -64,10 +65,11 @@
 				<h3 class="join_title">
 					<label for="inputId">아이디</label>
 				</h3>
-				<span class="box int_id"> <input type="hidden" id="inputId"
-					name="id" class="int" maxlength="20" value="${member.id}">
+				<span class="box int_id"> 
+				<input type="hidden" id="inputId" name="id" class="int" maxlength="20" value="${member.id}">
 					${member.id} <span class="step_url">@naver.com</span>
-				</span> <span class="error_next_box"></span>
+				</span> 
+				<span class="error_next_box"></span>
 			</div>
 
 			<!-- PW1 -->
@@ -75,20 +77,21 @@
 				<h3 class="join_title">
 					<label for="inputPassword">비밀번호</label>
 				</h3>
-				<span class="box int_pass"> <input type="password"
-					id="inputPassword" name="pass" class="int" maxlength="20">
-				</span> <br /> <a data-role="button" href="javascript:passchg_winopen()">비밀번호
-					변경</a>
+				<span class="box int_pass"> 
+				<input type="password" id="inputPassword" name="pass" class="int" maxlength="20">
+				</span> <br /> 
+				<a data-role="button" href="javascript:passchg_winopen()">비밀번호 변경</a>
 			</div>
 			<!-- NAME -->
 			<div>
 				<h3 class="join_title">
 					<label for="inputName">이름</label>
 				</h3>
-				<span class="box int_name"> <input type="hidden"
-					id="inputName" name="name" value="${member.name}" class="int"
-					maxlength="20"> ${member.name}
-				</span> <span class="error_next_box"></span>
+				<span class="box int_name"> 
+				<input type="hidden" id="inputName" name="name" value="${member.name}" class="int" maxlength="20"> 
+					${member.name}
+				</span> 
+				<span class="error_next_box"></span>
 			</div>
 
 			<!-- BIRTHDAY -->
@@ -96,10 +99,11 @@
 				<h3 class="join_title">
 					<label for="inputBirthday">생년월일</label>
 				</h3>
-				<span class="box int_birthday"> <input type="hidden"
-					id="inputBirthday" name="birthday" class="int" maxlength="20"
+				<span class="box int_birthday"> 
+				<input type="hidden" id="inputBirthday" name="birthday" class="int" maxlength="20"
 					value="${member.birthday}">${member.birthday}
-				</span> <span class="error_next_box"></span>
+				</span> 
+				<span class="error_next_box"></span>
 			</div>
 
 			<!-- JOINDATE -->
@@ -107,10 +111,11 @@
 				<h3 class="join_title">
 					<label for="inputJoin_date">가입일</label>
 				</h3>
-				<span class="box int_join_date"> <input type="hidden"
-					id="inputJoin_date" name="join_date" class="int" maxlength="20"
+				<span class="box int_join_date"> 
+				<input type="hidden" id="inputJoin_date" name="join_date" class="int" maxlength="20"
 					value="${member.join_date}">${member.join_date}
-				</span> <span class="error_next_box"></span>
+				</span> 
+				<span class="error_next_box"></span>
 			</div>
 
 
@@ -119,8 +124,9 @@
 				<h3 class="join_title">
 					<label for="inputGender">성별</label>
 				</h3>
-				<span class="box int_email"> <input type="hidden" id="gender"
-					name="gender" class="int" maxlength="100" value="${member.gender}">${member.gender==0?"남자":"여자" }
+				<span class="box int_email"> 
+				<input type="hidden" id="gender" name="gender" 
+					class="int" maxlength="100" value="${member.gender}">${member.gender==0?"남자":"여자" }
 				</span>
 
 			</div>
@@ -130,8 +136,8 @@
 				<h3 class="join_title">
 					<label for="inputEmail">본인확인 이메일<span class="optional"></span></label>
 				</h3>
-				<span class="box int_email"> <input type="text" id="email"
-					name="email" class="int" maxlength="100" value="${member.email}">
+				<span class="box int_email"> 
+				<input type="text" id="email" name="email" class="int" maxlength="100" value="${member.email}">
 				</span>
 			</div>
 
@@ -141,9 +147,10 @@
 				<h3 class="join_title">
 					<label for="phoneNo">휴대전화</label>
 				</h3>
-				<span class="box int_mobile"> <input type="text" id="mobile"
-					name="tel" class="int" maxlength="16" value="${member.tel}">
-				</span> <span class="error_next_box"></span>
+				<span class="box int_mobile"> 
+				<input type="text" id="mobile" name="tel" class="int" maxlength="16" value="${member.tel}">
+				</span> 
+				<span class="error_next_box"></span>
 			</div>
 
 			<!-- ADDRESS -->
@@ -151,10 +158,11 @@
 				<h3 class="join_title">
 					<label for="address">주소</label>
 				</h3>
-				<span class="box int_mobile"> <input type="text"
-					id="inputAddress" name="address" class="int" maxlength="200"
+				<span class="box int_mobile"> 
+				<input type="text" id="inputAddress" name="address" class="int" maxlength="200"
 					value="${member.address}">
-				</span> <span class="error_next_box"></span>
+				</span> 
+				<span class="error_next_box"></span>
 			</div>
 
 			<!-- PET KIND -->
@@ -162,10 +170,11 @@
 				<h3 class="join_title">
 					<label for="pet_kind">반려동물 종류</label>
 				</h3>
-				<span class="box int_mobile"> <input type="text"
-					id="inputPet_kind" name="pet_kind" class="int" maxlength="16"
+				<span class="box int_mobile"> 
+				<input type="text" id="inputPet_kind" name="pet_kind" class="int" maxlength="16"
 					value="${member.pet_kind}">
-				</span> <span class="error_next_box"></span>
+				</span> 
+				<span class="error_next_box"></span>
 			</div>
 
 			<!-- PET NAME -->
@@ -173,10 +182,11 @@
 				<h3 class="join_title">
 					<label for="pet_name">반려동물 이름</label>
 				</h3>
-				<span class="box int_mobile"> <input type="text"
-					id="inputPet_name" name="pet_name" class="int" maxlength="16"
+				<span class="box int_mobile"> 
+				<input type="text" id="inputPet_name" name="pet_name" class="int" maxlength="16"
 					value="${member.pet_name}">
-				</span> <span class="error_next_box"></span>
+				</span> 
+				<span class="error_next_box"></span>
 			</div>
 
 			<!-- PET AGE -->
@@ -184,10 +194,11 @@
 				<h3 class="join_title">
 					<label for="pet_age">반려동물 나이</label>
 				</h3>
-				<span class="box int_mobile"> <input type="text"
-					id="inputPet_age" name="pet_age" class="int" maxlength="16"
+				<span class="box int_mobile"> 
+				<input type="text" id="inputPet_age" name="pet_age" class="int" maxlength="16"
 					value="${member.pet_age}">
-				</span> <span class="error_next_box"></span>
+				</span> 
+				<span class="error_next_box"></span>
 			</div>
 
 
