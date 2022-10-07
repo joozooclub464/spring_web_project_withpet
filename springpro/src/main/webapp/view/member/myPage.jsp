@@ -4,7 +4,7 @@
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<meta charset="UTF-8" />
+<meta charset="EUC-KR" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Mypage_NDversion</title>
 <link rel="icon" type="image/png"
@@ -104,11 +104,13 @@
 				<button class="category__btn selected" data-filter="*">
 					STAY <span class="category__count">${rhCount}</span>
 				</button>
-			</a> <a href="\springpro/reserveClinic/list">
+			</a> 
+			<a href="\springpro/reserveClinic/list">
 				<button class="category__btn" data-filter="front-end">
 					CARE <span class="category__count">${rcCount}</span>
 				</button>
-			</a><a href="\springpro/reserveClinic/pastList">
+			</a>
+			<a href="\springpro/reserveClinic/pastList">
 				<button class="category__btn" data-filter="back-end">
 					HISTORY <span class="category__count">${phCount+pcCount}</span>
 				</button>
