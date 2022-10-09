@@ -4,9 +4,7 @@
 <!DOCTYPE html>
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/assets/css/playpet copy.css" />
-
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
 
 <!-- 드롭다운 css -->
 <script src="playpet.js" defer></script>
@@ -17,8 +15,6 @@
 	margin-right: auto;
 }
 </style>
-
-
 
 <!-- title -->
 <div class="title">
@@ -33,7 +29,6 @@
 	</h3>
 </c:if>
 
-
 <section id="searchbar" class=searchbar__section>
 	<div class="searchbar__box">
 		<div class="searchbar__container">
@@ -41,12 +36,15 @@
 				<!-- <li class="searchbar__menu__item nav-item">나의 일상을 함께 기록하고 <br>가고 싶은 위치를 한번에 알아보는<br> With.Stay</li> -->
 				<!-- <li class="searchbar__menu__item nav-item"><a role="tab"
 					data-toggle="tab" href="list">All</a></li> -->
-				<li class="searchbar__menu__item nav-item"><a role="tab"
-					data-toggle="tab" href="list?playid=1">CAFE</a></li>
-				<li class="searchbar__menu__item nav-item"><a role="tab"
-					data-toggle="tab" href="list?playid=2">PLAY_GROUND</a></li>
-				<li class="searchbar__menu__item nav-item"><a role="tab"
-					data-toggle="tab" href="list?playid=3">DINING</a></li>
+				<li class="searchbar__menu__item nav-item">
+					<a role="tab" data-toggle="tab" href="list?playid=1">CAFE</a>
+				</li>
+				<li class="searchbar__menu__item nav-item">
+					<a role="tab" data-toggle="tab" href="list?playid=2">PLAY_GROUND</a>
+				</li>
+				<li class="searchbar__menu__item nav-item">
+					<a role="tab" data-toggle="tab" href="list?playid=3">DINING</a>
+				</li>
 			</ul>
 		</div>
 		<div>
@@ -66,10 +64,8 @@
 			<div class="work__projects">
 				<c:if test="${playPlace.p_num != 0 }">
 					<c:forEach var="playPlace" items="${list}">
-						<a href="info?p_num=${playPlace.p_num}" class="project"
-							data-type="front-end"> <img
-							src="<%=request.getContextPath()%>/img/${playPlace.p_img1}"
-							class="project__img" />
+						<a href="info?p_num=${playPlace.p_num}" class="project" data-type="front-end"> 
+						<img src="<%=request.getContextPath()%>/img/${playPlace.p_img1}" class="project__img" />
 
 							<div class="project__description">
 								<h3>${playPlace.p_name}</h3>
@@ -80,25 +76,19 @@
 							<h3 style="text-align: left;">
 								<br>${playPlace.p_name}<br> <br> <br>
 							</h3>
-							<h4 style="text-align: left;">${playPlace.content}<br>
-							</h4>
+							<h4 style="text-align: left;">${playPlace.content}<br> </h4>
 							<ul>
-								<li style="text-align: left;">운영시간 : 매일 10:00 - 18:00 매주
-									수요일 휴무</li>
-								<!-- 운영시간은 테이블에 컬럼 추가하기 -->
+								<li style="text-align: left;">운영시간 : ${playPlace.open_hour}</li>
 								<li>주소 : ${playPlace.p_location}</li>
 								<li>전화 : ${playPlace.p_tel}</li>
 								<li>주차여부 : ${playPlace.park == 1 ? "주차가능" : "주차불가"}</li>
 								<c:if test="${id eq 'admin'}">
-									<h3
-										style="text-align: right; margin-right: 50px; font-weight: bold; color: black;">
-										<a class="aaaaa" href="updateForm?p_num=${playPlace.p_num}">[놀이시설
-											수정]</a>
+									<h3 style="text-align: right; margin-right: 50px; font-weight: bold; color: black;">
+										<a class="aaaaa" href="updateForm?p_num=${playPlace.p_num}">[놀이시설 수정]</a>
 									</h3>
 								</c:if>
 								<c:if test="${id eq 'admin'}">
-									<h3
-										style="text-align: right; margin-right: 50px; font-weight: bold;">
+									<h3 style="text-align: right; margin-right: 50px; font-weight: bold;">
 										<a href="delete?p_num=${playPlace.p_num}">[놀이시설 삭제]</a>
 									</h3>
 								</c:if>
