@@ -3,17 +3,14 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!DOCTYPE html>
 <html>
-
 <head>
-
-<meta charset="utf-8">
+<meta charset="EUC-KR">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Shop Homepage</title>
+<title>CLINIC</title>
 <!-- Custom styles for this template -->
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/assets/css/hotel.css">
