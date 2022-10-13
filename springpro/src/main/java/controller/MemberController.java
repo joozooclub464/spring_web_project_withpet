@@ -126,8 +126,9 @@ public class MemberController {
 	@RequestMapping("/logout")
 	public String logout(HttpSession session, Model model) throws Throwable {
 		String id = (String) session.getAttribute("id");
+		Member member = dao.selectOne(id);
 		session.invalidate();
-		String msg = id + "님이 로그아웃 되었습니다.";
+		String msg = member.getName() + "님이 로그아웃 되었습니다.";
 		String url = "main?list_id=3";
 		model.addAttribute("msg", msg);
 		model.addAttribute("url", url);
@@ -289,10 +290,10 @@ public class MemberController {
 			url = "updateForm?id=" + member.getId();
 		} else {
 			if (dao.update(member) > 0) {
-				msg = member.getId() + "님의 회원정보가 수정되었습니다.";
+				msg = member.getName()  + "님의 회원정보가 수정되었습니다.";
 				url = "myPage?id=" + member.getId();
 			} else {
-				msg = member.getId() + "님의 회원정보 수정 실패.";
+				msg = member.getName()  + "님의 회원정보 수정 실패.";
 				url = "updateForm?id=" + member.getId();
 			}
 		}
