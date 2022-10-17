@@ -12,7 +12,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet" />
 </head>
 
-
 <body>
 	<div class="page-container">
 		<div class="login-form-container shadow">
@@ -24,15 +23,13 @@
 
 	<div>
 		<form action="review" method="post" class="loginForm">
-			<input type="text" name="id" value="${review.id}" readonly> <input
-				type="text" name="h_num" value="${review.h_num}" readonly> <br />
+			<input type="text" name="id" value="${review.id}" readonly> 
+			<input type="text" name="h_num" value="${review.h_num}" readonly> <br />
 			<h2>${hotel.h_name}</h2>
 			<br />
-			<textarea name="rv_desc" cols="45" rows="20"
-				style="border: 1px solid #eeeeee;"> </textarea>
+			<textarea name="rv_desc" cols="45" rows="20" style="border: 1px solid #eeeeee;"> </textarea>
 			<br /> <br />
 			<input type="submit" class="btn" value="REVIEW">
-
 			<div style="color: gray">
 				당신의 목소리를 들려주세요: )<br />우리는 당신을 존중합니다&nbsp;&nbsp;&nbsp;&nbsp;: ) <br />
 				<br />
