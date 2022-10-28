@@ -12,14 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import dao.C_ReviewDaoMybatis;
 import dao.ClinicDaoMybatis;
-import dao.H_ReviewDaoMybatis;
 import dao.MemberDaoMybatis;
 import dao.ReserveClinicDaoMybatis;
 import dao.ReserveHotelDaoMybatis;
 import mybatis.C_Review;
 import mybatis.Clinic;
-import mybatis.H_Review;
-import mybatis.Hotel;
 import mybatis.Member;
 import mybatis.ReserveClinic;
 import mybatis.ReserveHotel;
@@ -36,13 +33,11 @@ public class ReserveClinicController {
 	@Autowired
 	MemberDaoMybatis mDao;
 	@Autowired
-	H_ReviewDaoMybatis h_rvDao;
-	@Autowired
 	C_ReviewDaoMybatis c_rvDao;
 
 	@RequestMapping("/reviewform")
 	public String reviewForm(int c_num, HttpSession session, Model model) {
-		// System.out.println(h_num);
+		// System.out.println(c_num);
 		// String id = (String) session.getAttribute("id");
 		// Member member = mDao.selectOne(id);
 		System.out.println(c_num);
@@ -52,13 +47,13 @@ public class ReserveClinicController {
 		review.setC_num(clinic.getC_num());
 		model.addAttribute("review", review);
 		model.addAttribute("clinic", clinic);
-		return "/single/review_form";
+		return "/single/Creview_form";
 	}
 
 	@RequestMapping("/review")
 	public String review(C_Review review, Model model) {
 		System.out.println(review);
-		String msg = "예약을 실패하였습니다.";
+		String msg = "리뷰 작성을 실패하였습니다.";
 		String url = "review_form";
 		if (c_rvDao.c_insert(review)) {
 			msg = "리뷰 작성이 완료되었습니다.";
@@ -69,6 +64,20 @@ public class ReserveClinicController {
 		System.out.println(review);
 		return "/alert";
 	}
+//	review list
+//	@RequestMapping("/list")
+//	public String list(Model model) {
+//		List<Clinic> list = dao.list();
+//		model.addAttribute("list", list);
+//		return "/clinic/list";
+//	}
+	@RequestMapping("/reviewList")
+	public String reviewList(int c_num,  Model model) {
+		List<C_Review> reviewlist = c_rvDao.review_list(c_num);
+		model.addAttribute("reviewlist", reviewlist);
+		return "/single/CreviewList";
+	}	
+//	test중
 
 	@RequestMapping("/reserveForm")
 	public String reserveForm(HttpSession session, int c_num, Model model) {
@@ -127,7 +136,7 @@ public class ReserveClinicController {
 	@RequestMapping("/edit")
 	public String edit(HttpSession session, int rc_num, ReserveClinic reserveClinic, Model model) {
 		String id = (String) session.getAttribute("id");
-		String msg = "회원님의 아이디로 예약된 호텔이 아닙니다.";
+		String msg = "회원님의 아이디로 예약된 병원이 아닙니다.";
 		String url = "list";
 		if (id.equals(dao.selectOne(rc_num).getId())) {
 			if (dao.update(reserveClinic) > 0) {
@@ -147,7 +156,7 @@ public class ReserveClinicController {
 	public String list(HttpSession session, Model model) {
 		String id = (String) session.getAttribute("id");
 		List<ReserveClinic> list = dao.list(id);
-		List<ReserveHotel> prHotel = rhDao.pastList(id);
+//		List<ReserveHotel> prHotel = rhDao.pastList(id);
 		List<ReserveClinic> prClinic = dao.pastList(id);
 		Member member = mDao.selectOne(id);
 		int count = dao.count(id);
@@ -158,7 +167,7 @@ public class ReserveClinicController {
 		model.addAttribute("rcList", list);
 		model.addAttribute("rcCount", count);
 		model.addAttribute("rhCount", rhCount);
-		model.addAttribute("prHotel", prHotel);
+//		model.addAttribute("prHotel", prHotel);
 		model.addAttribute("prClinic", prClinic);
 		model.addAttribute("pcCount", pcCount);
 		model.addAttribute("phCount", phCount);

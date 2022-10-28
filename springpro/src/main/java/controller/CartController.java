@@ -33,9 +33,9 @@ public class CartController {
 	  String url = "cartlist";
 	  cart.setId(id);
 	  if (dao.insert(cart) > 0) { 
-	  msg = "장바구니에 추가합니다";
-	   } 
-	 model.addAttribute("url", url);
+		  msg = "장바구니에 추가합니다";
+	  } 
+	  model.addAttribute("url", url);
 	  model.addAttribute("msg", msg);
 	  return "/alert"; 
 	  }
@@ -47,7 +47,7 @@ public class CartController {
 		List<Cart> list = dao.list(id);
 		int sum=0;
 		for(Cart cart:list) {
-		sum+=cart.getCartStock()*cart.getGbsPrice();
+			sum+=cart.getCartStock()*cart.getGbsPrice();
 		}
 		model.addAttribute("list", list);
 		model.addAttribute("sum",sum);
@@ -58,10 +58,9 @@ public class CartController {
 	public String delete(int cartId, Model model) {
 		String msg = "";
 		String url = "cartlist";
-		
-			if(dao.delete(cartId)>0) {
-				msg = "상품을 성공적으로 삭제하였습니다.";
-			} 
+		if(dao.delete(cartId)>0) {
+			msg = "상품을 성공적으로 삭제하였습니다.";
+		} 
 	
 		model.addAttribute("url", url);
 		model.addAttribute("msg", msg);

@@ -27,7 +27,6 @@ public class BoardController {
 	String sesboardid="1";
 	int sespageNum=1;
 	
-	
 	@Autowired
 	BoardDaoMybatis dao;
 	
@@ -36,7 +35,6 @@ public class BoardController {
 		
 		if (session.getAttribute("boardid")!=null) {
 			 sesboardid=(String) session.getAttribute("boardid");
-		
 		}
 			
 		if(session.getAttribute("pageNum")!=null) {
@@ -44,7 +42,6 @@ public class BoardController {
 			sespageNum=Integer.parseInt((String)(session.getAttribute("pageNum")));
 			} catch (Exception e) {}
 		}
-		
 	}
 	
 	
@@ -110,7 +107,6 @@ public class BoardController {
 		   model.addAttribute("pageNum", pageNum);
 		   model.addAttribute("boardname", boardname);
 		
-		   
 		   return "board/list";
 	}
 	@RequestMapping("/write")
@@ -160,11 +156,10 @@ public class BoardController {
 			}
 			model.addAttribute("msg", msg);
 			model.addAttribute("url", url);
-		return "/alert";
+			return "/alert";
 	}
 
-	
-	
+
 	@RequestMapping("/info")
 	public String info(int b_num, Model model)  {
 		/* : 게시물 상세 보기    :board/info?num=41
@@ -173,7 +168,6 @@ public class BoardController {
 		  2. 조회수 증가시키기.  readcnt+1
 		      new BoardDao().readcntadd(num);
 		  3. 1번에서 조회한 게시물데이터를 화면에 출력하기   */ 
-		
 		//파라미터값읽기
 		
 		Board board = dao.selectOne(b_num); //게시물 조회
@@ -215,23 +209,26 @@ public class BoardController {
 			} catch (IOException e) {
 				board.setFile1("");
 				e.printStackTrace();			}
-		} else {			board.setFile1("");		}
+		} else {			
+			board.setFile1("");		
+		}
 		   //비밀번호 검증
 		
 		   Board dbBoard = dao.selectOne(board.getB_num());
 		   String msg = "비밀번호가 틀렸습니다.";
 		   String url = "updateForm?b_num=" + board.getB_num();
 		   
-		   
 		   if(board.getPass().equals(dbBoard.getPass())) {
 			   //수정하기
-		 	  if(dao.update(board)) {	  msg = "게시물 수정 완료";		  url = "list";
-			  } else {		  msg = "게시물 수정 실패";	  }
+		 	  if(dao.update(board)) {	  
+		 		  msg = "게시물 수정 완료";		  
+		 		  url = "list";
+			  } else {		  
+				  msg = "게시물 수정 실패";	  
+			  }
 		   }
 		   model.addAttribute("url", url);
 		   model.addAttribute("msg", msg);
-		
-		
 		
 		return "/alert";
 	}
@@ -249,14 +246,17 @@ public class BoardController {
 		   3. 게시물 삭제.
 		           삭제 성공 : 삭제 성공 메시지 출력, list.jsp 페이지 이동
 		           삭제 실패 : 삭제 실패 메시지 출력, info.jsp 페이지 이동   */           
-		String msg = "비밀번호가 틀렸습니다!";String url = "deleteForm?b_num=" + b_num;
+		String msg = "비밀번호가 틀렸습니다!";
+		String url = "deleteForm?b_num=" + b_num;
 		
 		Board board = dao.selectOne(b_num);
 		//board.getPass() : db에 저장된 비밀번호
 		if (pass.equals(board.getPass())) { 
-			if (dao.delete(b_num)) {		msg = "게시글을 성공적으로 삭제하였습니다.";		
-			url = "list";
-			} else {		msg = "게시글을 삭제하는데 실패하였습니다!";
+			if (dao.delete(b_num)) {		
+				msg = "게시글을 성공적으로 삭제하였습니다.";		
+				url = "list";
+			} else {		
+				msg = "게시글을 삭제하는데 실패하였습니다!";
 				url = "info?num=" + b_num;
 			}}
 		
@@ -282,7 +282,7 @@ public class BoardController {
 	public String reply(Board board, Model model)  {
 		/*	 /WebContent/model1/board/reply.jsp : 답글 등록
 		   1. 파라미터 값을 Board 객체에 저장하기
-		            원글정보 : num, ref, reflevel(ㄴ), refstep(print)
+		            원글정보 : num, ref, reflevel(), refstep(print)
 		            답글정보  : name, pass, subject, content 
 		   2. 같은 ref 값을 사용하는 게시물들의 refstep 값을 1 증가 시키기
 		                     1    1    0         0
@@ -303,15 +303,16 @@ public class BoardController {
 		   board.setBoardid(sesboardid);  //입력시 boardid 입력함
 		   dao.refstepadd(board.getRef(),board.getRefstep()); 
 		   //3. Board 객체를 db에 insert 하기.
-		  String msg = "답변등록시 오류발생";
+		   String msg = "답변등록시 오류발생";
 		   String url = "replyForm?b_num="+board.getB_num();
-		  if(dao.insert(board)) {  	  msg = "답변등록 완료"; 
-		  url = "list";   }
+		   if(dao.insert(board)) {  	  
+			   msg = "답변등록 완료"; 
+			   url = "list";   
+		   }
+		   model.addAttribute("url", url);
+		   model.addAttribute("msg", msg);
 		
-		model.addAttribute("url", url);
-		model.addAttribute("msg", msg);
-		
-		return "/alert";
+		   return "/alert";
 	}
 
 	

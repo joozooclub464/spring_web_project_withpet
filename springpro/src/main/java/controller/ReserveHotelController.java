@@ -73,13 +73,13 @@ public class ReserveHotelController {
 		review.setH_num(hotel.getH_num());
 		model.addAttribute("review", review);
 		model.addAttribute("hotel", hotel);
-		return "/single/review_form";
+		return "/single/Hreview_form";
 	}
 
 	@RequestMapping("/review")
 	public String review(H_Review review, Model model) {
 		System.out.println(review);
-		String msg = "예약을 실패하였습니다.";
+		String msg = "리뷰 작성을 실패하였습니다.";
 		String url = "review_form";
 		if (h_rvDao.h_insert(review)) {
 			msg = "리뷰 작성이 완료되었습니다.";
@@ -136,10 +136,13 @@ public class ReserveHotelController {
 	@RequestMapping("/editForm")
 	public String editForm(int rh_num, Model model) {
 		ReserveHotel reserveHotel = dao.selectOne(rh_num);
+//		ReserveHotel hotel = dao.selectOne1(h_num);//
 		model.addAttribute("reserveHotel", reserveHotel);
+//		model.addAttribute("hotel", hotel);//
 		return "/single/HeditForm";
 	}
 
+	
 	@RequestMapping("/edit")
 	public String edit(HttpSession session, int rh_num, ReserveHotel reserveHotel, Model model) {
 		String id = (String) session.getAttribute("id");

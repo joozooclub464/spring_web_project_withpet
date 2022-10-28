@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import dao.C_ReviewDaoMybatis;
 import dao.ClinicDaoMybatis;
+import mybatis.C_Review;
 import mybatis.Clinic;
 
 @Controller
@@ -22,11 +24,13 @@ import mybatis.Clinic;
 public class ClinicController {
 	@Autowired
 	ClinicDaoMybatis dao;
+	C_ReviewDaoMybatis rvdao;
+	
 
 	@RequestMapping("/regist")
 	public String regist(HttpSession session, Clinic clinic, Model model) {
 		String id = (String) session.getAttribute("id");
-		String msg = "관리자만 호텔목록을 생성할 수 있습니다!";
+		String msg = "관리자만 병원목록을 생성할 수 있습니다!";
 		String url = "list";
 		try {
 			if (id.equals("admin")) {
@@ -79,7 +83,7 @@ public class ClinicController {
 	@RequestMapping("/update")
 	public String update(HttpSession session, Clinic clinic, Model model) {
 		String id = (String) session.getAttribute("id");
-		String msg = "관리자만 호텔목록을 수정/삭제할 수 있습니다!";
+		String msg = "관리자만 병원목록을 수정/삭제할 수 있습니다!";
 		String url = "list";
 		if (id.equals("admin")) {
 			if (dao.update(clinic) > 0) {
@@ -104,8 +108,10 @@ public class ClinicController {
 	public String info(int c_num, Model model) {
 		Clinic clinic = dao.selectOne(c_num); // 게시물 조회
 		List<Clinic> list = dao.list();
+		List<C_Review> review_list = dao.review_list(c_num);//수정중
 		model.addAttribute("list", list);
 		model.addAttribute("clinic", clinic);
+		model.addAttribute("review_list", review_list);//수정중
 		return "/clinic/info";
 	}
 
