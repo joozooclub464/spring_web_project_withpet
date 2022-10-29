@@ -1,16 +1,16 @@
 package dao;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import mybatis.C_Review;
 import mybatis.Clinic;
+import mapper.C_ReviewMapper;
 import mapper.ClinicMapper;
-import mapper.HotelMapper;
+
 
 
 @Repository
@@ -48,4 +48,11 @@ public class ClinicDaoMybatis {
 		List<Clinic> rank_list = session.getMapper(ClinicMapper.class).rank_list();
 		return rank_list;
 	}
+	//수정중
+	public List<C_Review> review_list(int c_num) {
+		List<C_Review> review_list = session.getMapper(C_ReviewMapper.class).review_list(c_num);
+		return review_list;
+	}
+	//수정중
+
 }

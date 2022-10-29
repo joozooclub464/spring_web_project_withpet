@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import mybatis.Hotel;
+import mybatis.ReserveHotel;
 import mapper.HotelMapper;
+import mapper.ReserveHotelMapper;
 
 @Repository
 public class HotelDaoMybatis {
@@ -23,6 +25,12 @@ public class HotelDaoMybatis {
 		if(count>0)	return count;
 		else return 0;
 	}
+	//수정중
+//	public Hotel selectOne1(int rh_num) {
+//		Hotel Hotel = session.getMapper(HotelMapper.class).selectOne(rh_num);
+//		return Hotel;
+//	}
+	//수정중
 	public Hotel selectOne(int h_num) {
 		Hotel hotel = session.getMapper(HotelMapper.class).selectOne(h_num);
 		return hotel;

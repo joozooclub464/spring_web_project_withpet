@@ -17,16 +17,12 @@ public class BoardDaoMybatis {
 
 	@Autowired
 	SqlSessionTemplate session;
-
 	public int boardCount(String boardid) {
-
 		int count = session.getMapper(BoardMapper.class).count(boardid);
-
 		return count;
 	}
 
 	public List<Board> list(int pageNum, int limit, int boardcount, String boardid) { // limit =3
-
 		// ---------------------------------
 		int start = (pageNum - 1) * limit + 1;
 		int end = start + limit - 1;
@@ -37,11 +33,9 @@ public class BoardDaoMybatis {
 
 		List<Board> list = session.getMapper(BoardMapper.class).list(map);
 		return list;
-
 	}
 
 	public boolean insert(Board board) {
-
 		int b_num = session.getMapper(BoardMapper.class).max();
 		if (board.getB_num() > 0) { // ´ä±Û
 			board.setRef(board.getRef());
@@ -61,36 +55,26 @@ public class BoardDaoMybatis {
 			return true;
 		else
 			return false;
-
-	}
+}
 
 	public Board selectOne(int b_num) {
-
 		Board board = (Board) session.getMapper(BoardMapper.class).selectOne(b_num);
-
 		return board;
 	}
 
 	public void readcntadd(int b_num) {
-
 		session.getMapper(BoardMapper.class).readcntadd(b_num);
-
 	}
 
 	public void likecntadd(int b_num) {
-
 		session.getMapper(BoardMapper.class).likecntadd(b_num);
-
 	}
 	
 	public void likecntsub(int b_num) {
-
 		session.getMapper(BoardMapper.class).likecntsub(b_num);
-
 	}
 
 	public boolean update(Board board) {
-
 		boolean count = session.getMapper(BoardMapper.class).update(board);
 
 		if (count == true)
@@ -100,7 +84,6 @@ public class BoardDaoMybatis {
 	}
 
 	public boolean delete(int b_num) {
-
 		int count = session.getMapper(BoardMapper.class).delete(b_num);
 
 		if (count > 0)
@@ -110,7 +93,6 @@ public class BoardDaoMybatis {
 	}
 
 	public void refstepadd(int ref, int refstep) {
-
 		map.clear();
 		map.put("ref", ref);
 		map.put("refstep", refstep);

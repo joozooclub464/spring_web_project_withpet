@@ -8,7 +8,9 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import mybatis.Hotel;
 import mybatis.ReserveHotel;
+import mapper.HotelMapper;
 import mapper.ReserveHotelMapper;
 
 @Repository
@@ -22,6 +24,18 @@ public class ReserveHotelDaoMybatis {
 		if(count>0)	return rh_num;
 		else return 0;
 	}
+	//수정중
+//	public Hotel selectOne1(int h_num) {
+//		Hotel hotel = session.getMapper(HotelMapper.class).selectOne(h_num);
+//		return hotel;
+//	}
+	//위는 버리고 아래는 쓰던중
+//	public ReserveHotel selectOne1(int h_num) {
+//		ReserveHotel reserveHotel = session.getMapper(ReserveHotelMapper.class).selectOne(h_num);
+//		return reserveHotel;
+//	}
+	
+	//수정중
 	public ReserveHotel selectOne(int rh_num) {
 		ReserveHotel reserveHotel = session.getMapper(ReserveHotelMapper.class).selectOne(rh_num);
 		return reserveHotel;
@@ -40,6 +54,7 @@ public class ReserveHotelDaoMybatis {
 		List<ReserveHotel> list = session.getMapper(ReserveHotelMapper.class).list(id);
 		return list;
 	}
+	
 	public List<ReserveHotel> pastList(String id){
 		List<ReserveHotel> pastList = session.getMapper(ReserveHotelMapper.class).pastList(id);
 		return pastList;

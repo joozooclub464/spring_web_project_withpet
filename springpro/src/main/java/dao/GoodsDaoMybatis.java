@@ -29,8 +29,10 @@ public class GoodsDaoMybatis {
 	}
 	public int update(Goods goods) {
 		int count=(Integer)session.getMapper(GoodsMapper.class).update(goods);
-		if(count>0)	return count;
-		else return 0;
+		if(count>0)	
+			return count;
+		else 
+			return 0;
 	}
 	public int delete(int gbsNum) {
 		int count=(Integer)session.getMapper(GoodsMapper.class).delete(gbsNum);

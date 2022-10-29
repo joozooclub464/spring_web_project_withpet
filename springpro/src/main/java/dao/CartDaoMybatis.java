@@ -17,7 +17,7 @@ public class CartDaoMybatis {
 	@Autowired
 	 SqlSessionTemplate session;
 	
-	//카트담기?
+	//카트담기
 	public int insert(Cart cart) {
 		int cartId = (Integer)session.getMapper(CartMapper.class).max();
 		cart.setCartId(cartId);

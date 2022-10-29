@@ -29,15 +29,13 @@ public class H_ReviewDaoMybatis {
   }
 
   public List<H_Review> h_list(int h_num) { // limit =3
-
-    List<H_Review> list = session.getMapper(H_ReviewMapper.class).h_list(h_num);
+	List<H_Review> list = session.getMapper(H_ReviewMapper.class).h_list(h_num);
     return list;
   }
 
 
   public List<H_Review> id_selectOne(String id) {
-
-    List<H_Review> list = session.getMapper(H_ReviewMapper.class).id_selectOne(id);
+	List<H_Review> list = session.getMapper(H_ReviewMapper.class).id_selectOne(id);
     return list;
   }
 
@@ -54,15 +52,13 @@ public class H_ReviewDaoMybatis {
   }
 
   public H_Review h_selectOne(int h_num) {
-
-    H_Review review = session.getMapper(H_ReviewMapper.class).h_selectOne(h_num);
+	H_Review review = session.getMapper(H_ReviewMapper.class).h_selectOne(h_num);
     return review;
   }
 
 
   public boolean update(H_Review review) {
-
-    int count = session.getMapper(H_ReviewMapper.class).update(review);
+	int count = session.getMapper(H_ReviewMapper.class).update(review);
 
     if (count > 0)
       return true;
@@ -70,10 +66,8 @@ public class H_ReviewDaoMybatis {
       return false;
   }
 
-
   public boolean delete(int rv_num) {
-
-    int count = session.getMapper(H_ReviewMapper.class).delete(rv_num);
+	int count = session.getMapper(H_ReviewMapper.class).delete(rv_num);
 
     if (count > 0)
       return true;
