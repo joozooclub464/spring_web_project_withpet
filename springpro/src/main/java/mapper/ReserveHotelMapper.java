@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.*;
+
+import mybatis.Hotel;
 import mybatis.ReserveHotel;
 
 public interface ReserveHotelMapper {
@@ -23,6 +25,17 @@ public interface ReserveHotelMapper {
 	
 	@Select("select * from reservehotel where rh_num = #{rh_num}")
 	ReserveHotel selectOne(int rh_num);
+
+	//수정중
+	
+	/*
+	 * @Select("select room_kind1,room_kind2,room_kind3,room_kind4,room_kind5 from hotel"
+	 * +"where h_num=" + "(select h_num from reservehotel" +
+	 * "where rh_num=#{rh_num})") ReserveHotel selectOne1(int rh_num);
+	 */
+	 
+	//수정중
+	
 	
 	@Insert("insert into reservehotel (rh_num, h_num, h_name, h_tel, room_kind, id, name, num, s_date, e_date, pet_kind, pet_num, content) "
 			+"values(#{rh_num},#{h_num},#{h_name},#{h_tel},#{room_kind},#{id},#{name},#{num},#{s_date},#{e_date},#{pet_kind},#{pet_num},#{content})")

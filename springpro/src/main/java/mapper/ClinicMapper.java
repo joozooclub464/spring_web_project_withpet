@@ -28,4 +28,6 @@ public interface ClinicMapper {
 
 	@Select("select * from clinic where c_num in (select c_num from (select c_num, count(c_num) from reserveclinic group by c_num order by count(c_num) desc) where rownum <=6)")
 	List<Clinic> rank_list();
+	
+
 }

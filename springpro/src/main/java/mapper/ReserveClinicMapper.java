@@ -28,7 +28,7 @@ public interface ReserveClinicMapper {
 			+"values(#{rc_num},#{c_num},#{c_name},#{c_tel},#{id},#{name},#{date1},#{time1},#{pet_kind},#{pet_name},#{pet_age},#{problem})")
 	int insert(ReserveClinic reserveClinic);
 	
-	@Update("update reserveclinic set date1=#{date1}, time1=#{time1}, kind=#{kind}, pet_name=#{pet_name}, problem=#{problem} where rc_num=#{rc_num}")
+	@Update("update reserveclinic set date1=#{date1}, time1=#{time1}, pet_kind=#{pet_kind}, pet_name=#{pet_name}, problem=#{problem} where rc_num=#{rc_num}")
 	int update(ReserveClinic reserveClinic);
 	
 	@Delete("delete from reserveclinic where rc_num=#{rc_num}")

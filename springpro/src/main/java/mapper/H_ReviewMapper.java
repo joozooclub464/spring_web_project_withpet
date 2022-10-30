@@ -34,7 +34,7 @@ public interface H_ReviewMapper {
 
   @Insert("insert into review (rv_num, id, rv_desc, h_num)"
       + "values(#{rv_num}, #{id}, #{rv_desc}, #{h_num})")
-  int h_insert(H_Review review);
+  int h_insert(H_Review review); 
 
   @Update("update review set rv_desc=#{rv_desc} where rv_num=#{rv_num}")
   int update(H_Review review);
