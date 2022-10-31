@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="EUC-KR" ?>
 <!-- /src/mapper/mybatis-config.xml -->
 <!DOCTYPE configuration PUBLIC "-//mybatis.org/DTD config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
@@ -9,8 +9,7 @@
 		<typeAlias type="mybatis.Hotel" alias="hotel" />
 		<typeAlias type="mybatis.ReserveHotel" alias="reserveHotel" />
 		<typeAlias type="mybatis.Clinic" alias="clinic" />
-		<typeAlias type="mybatis.ReserveClinic"
-			alias="reserveClinic" />
+		<typeAlias type="mybatis.ReserveClinic" alias="reserveClinic" />
 		<typeAlias type="mybatis.PlayPlace" alias="playPlace" />
 		<typeAlias type="mybatis.Goods" alias="goods" />
 		<typeAlias type="mybatis.Cart" alias="cart" />
@@ -19,7 +18,7 @@
 
 	</typeAliases>
 
-	<mappers><!-- sql êµ¬ë¬¸ -->
+	<mappers><!-- sql ±¸¹® -->
 		<mapper class="mapper.MemberMapper" />
 		<mapper class="mapper.BoardMapper" />
 		<mapper class="mapper.HotelMapper" />
