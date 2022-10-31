@@ -6,13 +6,17 @@ public class Hotel {
 	private String h_location;
 	private String h_tel;
 	private String picture;
-	private String room_kind;
 	private String room_num;
 	private String park;
 	private String reserve;
 	private String wifi;
 	private String disability;
 	private String reference_room;
+	private String room_kind1;
+	private String room_kind2;
+	private String room_kind3;
+	private String room_kind4;
+	private String room_kind5;
 	public int getH_num() {
 		return h_num;
 	}
@@ -43,11 +47,35 @@ public class Hotel {
 	public void setPicture(String picture) {
 		this.picture = picture;
 	}
-	public String getRoom_kind() {
-		return room_kind;
+	public String getRoom_kind1() {
+		return room_kind1;
 	}
-	public void setRoom_kind(String room_kind) {
-		this.room_kind = room_kind;
+	public void setRoom_kind1(String room_kind1) {
+		this.room_kind1 = room_kind1;
+	}
+	public String getRoom_kind2() {
+		return room_kind2;
+	}
+	public void setRoom_kind2(String room_kind2) {
+		this.room_kind2 = room_kind2;
+	}
+	public String getRoom_kind3() {
+		return room_kind3;
+	}
+	public void setRoom_kind3(String room_kind3) {
+		this.room_kind3 = room_kind3;
+	}
+	public String getRoom_kind4() {
+		return room_kind4;
+	}
+	public void setRoom_kind4(String room_kind4) {
+		this.room_kind4 = room_kind4;
+	}
+	public String getRoom_kind5() {
+		return room_kind5;
+	}
+	public void setRoom_kind5(String room_kind5) {
+		this.room_kind5 = room_kind5;
 	}
 	public String getRoom_num() {
 		return room_num;
@@ -88,8 +116,10 @@ public class Hotel {
 	@Override
 	public String toString() {
 		return "Hotel [h_num=" + h_num + ", h_name=" + h_name + ", h_location=" + h_location + ", h_tel=" + h_tel
-				+ ", picture=" + picture + ", room_kind=" + room_kind + ", room_num=" + room_num + ", park=" + park
-				+ ", reserve=" + reserve + ", wifi=" + wifi + ", disability=" + disability + ", reference_room="
-				+ reference_room + "]";
+				+ ", picture=" + picture + ", room_num=" + room_num + ", park=" + park + ", reserve=" + reserve
+				+ ", wifi=" + wifi + ", disability=" + disability + ", reference_room=" + reference_room
+				+ ", room_kind1=" + room_kind1 + ", room_kind2=" + room_kind2 + ", room_kind3=" + room_kind3
+				+ ", room_kind4=" + room_kind4 + ", room_kind5=" + room_kind5 + "]";
 	}
+
 }

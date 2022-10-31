@@ -108,10 +108,8 @@ public class ClinicController {
 	public String info(int c_num, Model model) {
 		Clinic clinic = dao.selectOne(c_num); // 게시물 조회
 		List<Clinic> list = dao.list();
-		List<C_Review> review_list = dao.review_list(c_num);//수정중
 		model.addAttribute("list", list);
 		model.addAttribute("clinic", clinic);
-		model.addAttribute("review_list", review_list);//수정중
 		return "/clinic/info";
 	}
 

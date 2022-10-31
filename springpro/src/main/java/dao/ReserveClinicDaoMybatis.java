@@ -12,7 +12,6 @@ import mapper.ReserveClinicMapper;
 
 @Repository
 public class ReserveClinicDaoMybatis {
-	//private static Map<String, Object> map=new HashMap<String, Object>();
 	@Autowired
 	 SqlSessionTemplate session;
 	public int insert(ReserveClinic reserveClinic) {

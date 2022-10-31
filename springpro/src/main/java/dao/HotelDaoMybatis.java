@@ -15,7 +15,6 @@ import mapper.ReserveHotelMapper;
 
 @Repository
 public class HotelDaoMybatis {
-	//private static Map<String, Object> map=new HashMap<String, Object>();
 	@Autowired
 	 SqlSessionTemplate session;
 	public int insert(Hotel hotel) {
@@ -25,12 +24,6 @@ public class HotelDaoMybatis {
 		if(count>0)	return count;
 		else return 0;
 	}
-	//수정중
-//	public Hotel selectOne1(int rh_num) {
-//		Hotel Hotel = session.getMapper(HotelMapper.class).selectOne(rh_num);
-//		return Hotel;
-//	}
-	//수정중
 	public Hotel selectOne(int h_num) {
 		Hotel hotel = session.getMapper(HotelMapper.class).selectOne(h_num);
 		return hotel;

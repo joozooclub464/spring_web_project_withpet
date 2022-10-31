@@ -17,14 +17,6 @@ public interface C_ReviewMapper {
   @Select("select reviewseq.nextval from dual")
   int max();
 
-  // ¸®ºä Ä«¿îÆ®
-	/*
-	 * @Select("select * from review where c_num = #{c_num}") C_Review
-	 * c_selectOne(int c_num);
-	 * 
-	 * @Select("select * from review where id = #{id}") List<C_Review>
-	 * id_selectOne(String id);
-	 */
   @Select("select count(*) from review where id=#{id}")
   int count(String id);
 

@@ -6,6 +6,7 @@ public class Goods {
 	private int gbsPrice;
 	private String gbsDes;
 	private String picture;
+	
 	public int getGbsNum() {
 		return gbsNum;
 	}

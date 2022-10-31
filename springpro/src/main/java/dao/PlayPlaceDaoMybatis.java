@@ -27,7 +27,6 @@ public class PlayPlaceDaoMybatis {
 		else
 			return 0;
 	}
-	/* ========ssong==================== */
 
 	public List<PlayPlace> list(int playid) {
 		map.put("playid", playid);

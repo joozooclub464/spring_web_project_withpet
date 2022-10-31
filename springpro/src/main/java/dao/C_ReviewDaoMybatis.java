@@ -77,7 +77,6 @@ public List<C_Review> review_list(int c_num) {
 }
 
 
-//  List selectList(query_id)
 
 
 } // end class

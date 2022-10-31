@@ -15,7 +15,6 @@ import mapper.ClinicMapper;
 
 @Repository
 public class ClinicDaoMybatis {
-	//private static Map<String, Object> map=new HashMap<String, Object>();
 	@Autowired
 	 SqlSessionTemplate session;
 	public int insert(Clinic clinic) {
@@ -48,11 +47,5 @@ public class ClinicDaoMybatis {
 		List<Clinic> rank_list = session.getMapper(ClinicMapper.class).rank_list();
 		return rank_list;
 	}
-	//수정중
-	public List<C_Review> review_list(int c_num) {
-		List<C_Review> review_list = session.getMapper(C_ReviewMapper.class).review_list(c_num);
-		return review_list;
-	}
-	//수정중
 
 }

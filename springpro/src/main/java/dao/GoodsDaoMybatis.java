@@ -12,7 +12,6 @@ import mapper.GoodsMapper;
 
 @Repository
 public class GoodsDaoMybatis {
-	//private static Map<String, Object> map=new HashMap<String, Object>();
 	@Autowired
 	SqlSessionTemplate session;
 	

@@ -24,18 +24,6 @@ public class ReserveHotelDaoMybatis {
 		if(count>0)	return rh_num;
 		else return 0;
 	}
-	//수정중
-//	public Hotel selectOne1(int h_num) {
-//		Hotel hotel = session.getMapper(HotelMapper.class).selectOne(h_num);
-//		return hotel;
-//	}
-	//위는 버리고 아래는 쓰던중
-//	public ReserveHotel selectOne1(int h_num) {
-//		ReserveHotel reserveHotel = session.getMapper(ReserveHotelMapper.class).selectOne(h_num);
-//		return reserveHotel;
-//	}
-	
-	//수정중
 	public ReserveHotel selectOne(int rh_num) {
 		ReserveHotel reserveHotel = session.getMapper(ReserveHotelMapper.class).selectOne(rh_num);
 		return reserveHotel;

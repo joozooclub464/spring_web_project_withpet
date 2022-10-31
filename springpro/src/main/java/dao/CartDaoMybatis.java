@@ -13,7 +13,6 @@ import mapper.CartMapper;
 
 @Repository
 public class CartDaoMybatis {
-	//private static Map<String, Object> map=new HashMap<String, Object>();
 	@Autowired
 	 SqlSessionTemplate session;
 	
