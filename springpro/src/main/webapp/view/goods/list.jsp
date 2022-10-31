@@ -2,7 +2,7 @@
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Karma">
 <link rel="stylesheet"
@@ -23,9 +23,13 @@
 		</h3>
 	</div>
 
+	<!-- !PAGE CONTENT! -->
 	<div class="w3-main w3-content w3-padding"
 		style="max-width: 1200px; margin-top: 100px">
 
+		<!-- First Photo Grid-->
+
+		<!-- <div class="w3-row-padding w3-padding-16 w3-center"> -->
 		<c:forEach var="goods" items="${list}">
 			<div class="w3-quarter" style="margin: 20px;">
 				<img style="width: 150px; height: 150px;"

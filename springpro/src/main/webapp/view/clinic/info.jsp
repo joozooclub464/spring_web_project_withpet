@@ -19,14 +19,17 @@
       <div class="searchbar__box">
          <div class="searchbar__container" style="border: 1px solid black;">
             <ul class="searchbar__menu nav nav-tabs" role="tab">
-               <li class="searchbar__menu__item nav-item"><a
-                  href="\springpro/member/main?list_id=3">HOME</a></li>
-               <li class="searchbar__menu__item nav-item"><a
-                  href="\springpro/reserveClinic/reviewform?c_num=${clinic.c_num}"
+               <li class="searchbar__menu__item nav-item">
+               <a href="\springpro/member/main?list_id=3">HOME</a></li>
+               <li class="searchbar__menu__item nav-item">
+               <a href="\springpro/reserveClinic/reviewform?c_num=${clinic.c_num}"
                   onclick="window.open(this.href, '', 'width=1000, height=1000, left=300, top=150'); return false;">REVIEW</a></li>
-               <li class="searchbar__menu__item nav-item"><a
-                  href="\springpro/reserveClinic/reserveForm?c_num=${clinic.c_num}"
+               <li class="searchbar__menu__item nav-item">
+               <a href="\springpro/reserveClinic/reserveForm?c_num=${clinic.c_num}"
                   onclick="window.open(this.href, '', 'width=1000, height=1000, left=300, top=150'); return false;">BOOKINGS</a></li>
+               <li class="searchbar__menu__item nav-item">
+               <%-- <a href="\springpro/reserveClinic/reviewList?c_num=${clinic.c_num}"
+                  onclick="window.open(this.href, '', 'width=1000, height=1000, left=300, top=150'); return false;">REVIEW LIST</a></li> --%>
             </ul>
          </div>
 	
@@ -118,7 +121,8 @@
          </tr>
       </table>
    </div>
-   <%-- <li>¸®ºä ³»¿ë : ${review.rv_desc}</li> --%>
+   <!-- ¸®ºä ¶ç¿öÁÖ±â  -->
+   <li>¸®ºä ³»¿ë : ${review.rv_desc}</li>
 
 </c:forEach>
 <br />

@@ -51,7 +51,7 @@ function like1(b_num) {
          <tr>
             <td width="20%">글쓴이</td>
             <td width="72%" style="text-align: left">${board.id}</td>
-            <td width="8%" style="text-align: left"><input type="button" class="like${lcount}" onclick="like${lcount}(${board.b_num})"></button></td>
+            <td width="8%" style="text-align: left"><input type="button" class="like${lcount}" onclick="like${lcount}(${board.b_num})"></td>
          </tr>
          <tr>
             <td>제목</td>

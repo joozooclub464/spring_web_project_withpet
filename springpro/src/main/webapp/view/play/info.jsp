@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/assets/css/playpet.css" />
-<script type="text/javascript"
-	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=381b7bef7ae9fa02ccc12e081a8fa829&libraries=services,clusterer,drawing"></script>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/playpet.css" />
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=381b7bef7ae9fa02ccc12e081a8fa829&libraries=services,clusterer,drawing"></script>
 
 <!-- 드롭다운 css -->
 <script src="<%=request.getContextPath()%>/assets/js/playpet.js" defer></script>
@@ -115,7 +113,6 @@
 	</div>
 
 </div>
-<!-- </div> -->
 <br />
 <br />
 <br />

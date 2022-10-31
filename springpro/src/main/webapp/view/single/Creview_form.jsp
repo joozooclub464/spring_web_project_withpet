@@ -2,7 +2,6 @@
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="EUC-KR" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +14,6 @@
 	rel="stylesheet" />
 </head>
 
-
 <body>
 	<div class="page-container">
 		<div class="login-form-container shadow">
@@ -27,15 +25,13 @@
 
 	<div>
 		<form action="review" method="post" class="loginForm">
-			<input type="text" name="id" value="${review.id}" readonly> <input
-				type="text" name="c_num" value="${review.c_num}" readonly> <br />
-			<h2>${clinic.c_name}</h2>
+			<input type="text" name="id" value="${review.id}" readonly> 
+			<input type="text" name="c_num" value="${review.c_num}" readonly> <br />
+				<h2>${clinic.c_name}</h2>
 			<br />
-			<textarea name="rv_desc" cols="45" rows="20"
-				style="border: 1px solid #eeeeee;"> </textarea>
+			<textarea name="rv_desc" cols="45" rows="20" style="border: 1px solid #eeeeee;"> </textarea>
 			<br /> <br />
 			<input type="submit" class="btn" value="REVIEW">
-
 			<div style="color: gray">
 				당신의 목소리를 들려주세요: )<br />우리는 당신을 존중합니다&nbsp;&nbsp;&nbsp;&nbsp;: ) <br />
 				<br />

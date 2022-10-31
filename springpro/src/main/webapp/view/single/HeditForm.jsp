@@ -20,20 +20,16 @@ $(document).ready(function() {
 </script>
 
 <div class="is-preload">
-
 	<!-- Wrapper -->
 	<div id="wrapper">
-
 		<!-- Main -->
 		<div id="main" class="alt">
-
 			<!-- One -->
 			<section id="one">
 				<div class="inner">
 					<header class="major">
 						<h1>${reserveHotel.h_name}</h1>
 					</header>
-
 					<!-- Content -->
 					<form action="edit" name="f" method="post">
 						<div class="row">
@@ -59,39 +55,11 @@ $(document).ready(function() {
 									<option value="room_kind5">${hotel.room_kind5}</option>
 								</select>
 								<input type="hidden" id="room_kind" name="room_kind"/>
-								<!-- 아래 인풋이 원래 있던 코드 -->
+								
 								<%-- <input type="text" name="room_kind" value="${reserveHotel.room_kind}"> --%>
 								<input type="text" name="room_kind_before" readonly value="${reserveHotel.room_kind}">
 								
-								<!-- 수정중------------------------------------------------------------- -->
-								<!-- 선언부 -->
-								<%-- <%! String room_value = ""; %> --%>
-								<!-- 스크립릿 -->
-								<%-- <% 
-									/* if ( ${reserveHotel.room_kind} eq "room_kind1") {
-										room_value= ${hotel.room_kind1} ;
-									} */
 
-								%> --%>
-								<!-- 출력부 -->
-									<%-- <c:choose>
-										<c:when test="${reserveHotel.room_kind eq 'room_kind1'}">
-											value=${hotel.room_kind1}
-										</c:when>
-										<c:when test="${reserveHotel.room_kind eq 'room_kind2'}">
-											value=${hotel.room_kind2}
-										</c:when>
-										<c:when test="${reserveHotel.room_kind eq 'room_kind3'}">
-											value=${hotel.room_kind3}
-										</c:when>
-										<c:when test="${reserveHotel.room_kind eq 'room_kind4'}">
-											value=${hotel.room_kind4}
-										</c:when>
-										<c:otherwise>
-											value=${hotel.room_kind5}
-										</c:otherwise>
-									</c:choose> --%>
- 								<!-- 수정중------------------------------------------------------------- -->
 
 								<h3>예약일자</h3>
 								<p>

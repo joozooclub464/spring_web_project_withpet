@@ -11,6 +11,7 @@
 </br>
 </br>
 <div class="hotel__container">
+	<h3>병원수정</h3>
 	<form class="hotel_form" action="update" name="f" method="post">
 
 		<div class="hotel_img">

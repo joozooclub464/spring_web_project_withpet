@@ -107,23 +107,7 @@
         <th>반려동물/내용</th>
       </tr>
     </thead>
-<!--     <tbody>
-      <tr>
-        <td>John</td>
-        <td>4/23</td>
-        <td>햄스터/소화불량</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>4/25</td>
-        <td>고양이/응급</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>4/29</td>
-        <td>강아지/안과</td>
-      </tr>
-    </tbody> -->
+
   </table>
       <a href="#"><button type="button" class="btn">작성하기</a></button>
     </div>

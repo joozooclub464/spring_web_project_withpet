@@ -11,10 +11,7 @@
 <!-- <link rel="stylesheet" href="C:\Users\andya\Documents\카카오톡 받은 파일\clinic\css\main.css"> -->
 
 <script>
-/* var selectBoxChange = function(value){
-	console.log("값 변경 테스트: " + value);
-	$("#changeInput").val(value);
-} */
+
 $(document).ready(function() {
 	$("#choose_room").change(function() {
 		console.log("값 변경 테스트:"+$(this).val());
@@ -46,22 +43,7 @@ $(document).ready(function() {
 								<input type="hidden" name="h_name" value="${hotel.h_name}"> 
 								<input type="hidden" name="h_num" value="${hotel.h_num}"> 
 								<input type="hidden" name="h_tel" value="${hotel.h_tel}">
-								<!-- <div>
-                                <input type="text" placehoder="검색어 입력">
-                                <button>검색</button>
-								</div> -->
-
 								
-								<!-- <div class="dropdown">
-									<button class="dropbtn">방 종류</button>
-									<div class="dropdown-content">
-										<a href="#">항목2</a> 
-										<a href="#">항목3</a> 
-										<a href="#">항목4</a> 
-										<a href="#">항목5</a>
-											
-									</div>
-								</div> -->
 								방 종류
 								<select id="choose_room">
 									<option>방 종류를 선택하세요</option>
@@ -96,7 +78,6 @@ $(document).ready(function() {
 								<input type="text" name="pet_num">
 								<!-- 예약 후 확인 버튼이 수정, 취소 버튼으로 바뀜 -->
 								<input type="submit" value="Submit">
-
 							</div>
 						</div>
 					</form>

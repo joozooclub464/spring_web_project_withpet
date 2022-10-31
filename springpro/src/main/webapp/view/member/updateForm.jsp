@@ -43,9 +43,6 @@
 <!-- wrapper -->
 <!-- <div id="wrapper"> -->
 <div class="container__join">
-	<!-- <div>
-            <img src="img/4c3f4b754e167.jpg" alt="ho" class="join__img" />
-        </div> -->
 
 	<!-- content-->
 	<div id="content">

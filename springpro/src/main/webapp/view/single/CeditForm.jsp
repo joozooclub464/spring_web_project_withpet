@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-
 <title>RESERVATION_PAGE_ss0n9version</title>
-
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet"
@@ -15,22 +13,17 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- <link rel="stylesheet" href="C:\Users\andya\Documents\카카오톡 받은 파일\clinic\css\main.css"> -->
 
-
 <div class="is-preload">
-
 	<!-- Wrapper -->
 	<div id="wrapper">
-
 		<!-- Main -->
 		<div id="main" class="alt">
-
 			<!-- One -->
 			<section id="one">
 				<div class="inner">
 					<header class="major">
 						<h1>${reserveClinic.c_name}</h1>
 					</header>
-
 					<!-- Content -->
 					<form action="edit" name="f" method="post">
 						<div class="row">
@@ -41,7 +34,6 @@
 								<input type="hidden" name="c_num" value="${reserveClinic.c_num}">
 								<input type="hidden" name="c_tel" value="${reserveClinic.c_tel}">
 								<input type="hidden" name="rc_num" value="${reserveClinic.rc_num}">
-								
 
 								<h3>예약일자</h3>
 								<p>
@@ -50,7 +42,6 @@
 								<p>
 									<input type="time" name="time1"value="${reserveClinic.time1}">
 								</p>
-
 
 							</div>
 							<div class="col-6 col-12-small">
@@ -64,13 +55,11 @@
 								<input type="text" name="pet_age" value="${reserveClinic.pet_age}"> <br /> <br />
 								<!-- 예약 후 확인 버튼이 수정, 취소 버튼으로 바뀜 -->
 								<input type="submit" value="Submit">
-
 							</div>
 					</form>
 				</div>
 				<hr class="major" />
 		</div>
-
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>

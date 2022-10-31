@@ -3,12 +3,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <meta charset="EUC-KR">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/delete_2.css" />
-    
+<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/delete_2.css" />
 <div class="page-container">
         <div class="login-form-container shadow">
             <div class="login-form-right-side">

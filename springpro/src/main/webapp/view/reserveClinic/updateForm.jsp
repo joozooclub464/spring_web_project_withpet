@@ -4,10 +4,7 @@
 	<form class="hotel_form" action="update" name="f" method="post">
 		</br> </br> </br> </br> </br>
 
-		<%-- <div class="hotel_div">
-			<img src="<%=request.getContextPath()%>/img/" width="100" height="120" id="pic"><br>
-					<font size="1"><a href="javascript:win_upload()">사진수정</a></font>
-		</div> --%>
+
 
 		<div class="hotel_div">
 			<label class="hotel_label">호텔명: </label> ${hotel.h_name}

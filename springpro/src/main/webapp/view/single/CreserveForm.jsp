@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-
 <title>RESERVATION_PAGE_ss0n9version</title>
-
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet"
@@ -15,22 +13,17 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- <link rel="stylesheet" href="C:\Users\andya\Documents\카카오톡 받은 파일\clinic\css\main.css"> -->
 
-
 <div class="is-preload">
-
 	<!-- Wrapper -->
 	<div id="wrapper">
-
 		<!-- Main -->
 		<div id="main" class="alt">
-
 			<!-- One -->
 			<section id="one">
 				<div class="inner">
 					<header class="major">
 						<h1>${clinic.c_name}</h1>
 					</header>
-
 					<!-- Content -->
 					<form action="reserve" name="f" method="post">
 						<div class="row">
@@ -40,20 +33,7 @@
 								<input type="hidden" name="c_name" value="${clinic.c_name}"> 
 								<input type="hidden" name="c_num" value="${clinic.c_num}"> 
 								<input type="hidden" name="c_tel" value="${clinic.c_tel}">
-								<!-- <div>
-                                <input type="text" placehoder="검색어 입력">
-                                <button>검색</button>
-
-                            </div> -->
-
-								<!-- <div class="dropdown">
-									<button class="dropbtn">타입</button>
-									<div class="dropdown-content">
-										<a href="#">항목2</a> <a href="#">항목3</a> <a href="#">항목4</a> <a
-											href="#">항목5</a>
-											
-									</div>
-								</div> -->
+							
 
 								<h3>예약일자</h3>
 								<p>
@@ -62,7 +42,6 @@
 								<p>
 									<input type="time" name="time1">
 								</p>
-
 
 							</div>
 							<div class="col-6 col-12-small">
@@ -76,13 +55,11 @@
 								<input type="text" name="pet_age" value="${member.pet_age}"> <br/><br/>
 								<!-- 예약 후 확인 버튼이 수정, 취소 버튼으로 바뀜 -->
 								<input type="submit" value="Submit">
-
 							</div>
 					</form>
 				</div>
 				<hr class="major" />
 		</div>
-
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>

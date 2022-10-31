@@ -39,25 +39,27 @@
 			</ul>
 			<ul class="actions stacked">
 				<c:if test="${id eq null}">
-					<li><a href="<%=request.getContextPath()%>/member/loginForm"
-						class="button fit">Log In</a></li>
+					<li>
+						<a href="<%=request.getContextPath()%>/member/loginForm" class="button fit">Log In</a>
+					</li>
 				</c:if>
 				<c:if test="${id eq 'admin'}">
-					<li><a href="<%=request.getContextPath()%>/member/memberList"
-						class="button primary fit">Member List</a></li>
+					<li>
+						<a href="<%=request.getContextPath()%>/member/memberList" class="button primary fit">Member List</a>
+					</li>
 				</c:if>
 				<c:if test="${id ne null}">
-					<li><a href="<%=request.getContextPath()%>/member/myPage"
-						class="button primary fit">Mypage</a></li>
-					<li><a href="<%=request.getContextPath()%>/member/logout"
-						class="button fit">Log Out</a></li>
+					<li>
+						<a href="<%=request.getContextPath()%>/member/myPage" class="button primary fit">Mypage</a>
+					</li>
+					<li>
+						<a href="<%=request.getContextPath()%>/member/logout" class="button fit">Log Out</a>
+					</li>
 				</c:if>
 			</ul>
 		</nav>
-		<video src="<%=request.getContextPath()%>/video\xodus.mp4" autoplay
-			class="preview" loop muted>
-			<source src="<%=request.getContextPath()%>/video\xodus.mp4"
-				type="video/mp4">
+		<video src="<%=request.getContextPath()%>/video\xodus.mp4" autoplay class="preview" loop muted>
+			<source src="<%=request.getContextPath()%>/video\xodus.mp4" type="video/mp4">
 		</video>
 	<div class="content__2">
 		<div class="content__desc" style="padding: 0px 50px 0px 0px">
@@ -69,9 +71,8 @@
 			세상을 향해 열린 문을 ‘톡’하고 두드려 보세요.</p4>
 		</div>
 		<ul class="actions">
-			<li><a href="<%=request.getContextPath()%>/view/single/about.jsp" class="button next scrolly"> <p2>자세히
-					보기</p2>
-			</a> <!-- <button class=detail type="button"><p2>자세히 보기</p2></button> -->
+			<li>
+				<a href="<%=request.getContextPath()%>/view/single/about.jsp" class="button next scrolly"> <p2>자세히 보기</p2> </a> <!-- <button class=detail type="button"><p2>자세히 보기</p2></button> -->
 			</li>
 		</ul>
 	</div>
@@ -80,15 +81,18 @@
 		<div class="searchbar__box">
 			<div class="searchbar__container">
 				<ul class="searchbar__menu nav nav-tabs" role="tab">
-					<li class="searchbar__menu__item nav-item"><a role="tab"
-						data-toggle="tab"
-						href="<%=request.getContextPath()%>/member/main?list_id=1">PLAY</a></li>
-					<li class="searchbar__menu__item nav-item"><a role="tab"
-						data-toggle="tab"
-						href="<%=request.getContextPath()%>/member/main?list_id=2">CARE</a></li>
-					<li class="searchbar__menu__item nav-item"><a role="tab"
-						data-toggle="tab"
-						href="<%=request.getContextPath()%>/member/main?list_id=3">STAY</a></li>
+					<li class="searchbar__menu__item nav-item">
+						<a role="tab" data-toggle="tab"
+						href="<%=request.getContextPath()%>/member/main?list_id=1">PLAY</a>
+					</li>
+					<li class="searchbar__menu__item nav-item">
+						<a role="tab" data-toggle="tab"
+						href="<%=request.getContextPath()%>/member/main?list_id=2">CARE</a>
+					</li>
+					<li class="searchbar__menu__item nav-item">
+						<a role="tab" data-toggle="tab"
+						href="<%=request.getContextPath()%>/member/main?list_id=3">STAY</a>
+					</li>
 				</ul>
 			</div>
 			<div>
@@ -97,10 +101,8 @@
 				<!-- 놀이시설 랭킹 띄워줌 -->
 				<c:if test="${p_rank_list ne null}">
 					<c:forEach var="playplace" items="${p_rank_list}">
-						<a href="<%=request.getContextPath()%>/play/info?p_num=${playplace.p_num}"
-							class="project" data-type="front-end"> <img
-							src="<%=request.getContextPath()%>/img/${playplace.p_img1}"
-							alt="Youtube" class="project__img" />
+						<a href="<%=request.getContextPath()%>/play/info?p_num=${playplace.p_num}" class="project" data-type="front-end"> 
+							<img src="<%=request.getContextPath()%>/img/${playplace.p_img1}" alt="Youtube" class="project__img" />
 							<div class="project__description">
 								<h3>${playplace.p_name}</h3>
 								<span>${playplace.p_location}</span>
@@ -112,10 +114,8 @@
 				<!-- 병원 랭킹 띄워줌 -->
 				<c:if test="${c_rank_list ne null}">
 					<c:forEach var="clinic" items="${c_rank_list}">
-						<a href="<%=request.getContextPath()%>/clinic/info?c_num=${clinic.c_num}"
-							class="project" data-type="front-end"> <img
-							src="<%=request.getContextPath()%>/img/${clinic.picture}"
-							alt="Youtube" class="project__img" />
+						<a href="<%=request.getContextPath()%>/clinic/info?c_num=${clinic.c_num}" class="project" data-type="front-end"> 
+						<img src="<%=request.getContextPath()%>/img/${clinic.picture}" alt="Youtube" class="project__img" />
 							<div class="project__description">
 								<h3>${clinic.c_name}</h3>
 								<span>${clinic.c_location}</span>
@@ -126,10 +126,8 @@
 				<!-- 숙소 랭킹 띄워줌 -->
 				<c:if test="${h_rank_list ne null}">
 					<c:forEach var="hotel" items="${h_rank_list}">
-						<a href="<%=request.getContextPath()%>/hotel/info?h_num=${hotel.h_num}"
-							class="project" data-type="front-end"> <img
-							src="<%=request.getContextPath()%>/img/${hotel.picture}"
-							alt="Youtube" class="project__img" />
+						<a href="<%=request.getContextPath()%>/hotel/info?h_num=${hotel.h_num}" class="project" data-type="front-end"> 
+						<img src="<%=request.getContextPath()%>/img/${hotel.picture}" alt="Youtube" class="project__img" />
 							<div class="project__description">
 								<h3>${hotel.h_name}</h3>
 								<span>${hotel.h_location}</span>
@@ -231,32 +229,32 @@
 		</div>
 	</section>
 	<!-- Contact -->
-	<section id="contact" class="section bot">
-		<div class="company">
-			<img src="<%=request.getContextPath()%>/img/logo_withpet.png"
-				alt="logo__withpet" class="brand__logo" />
+<section id="contact" class="section bot">
+	<div class="company">
+		<img src="<%=request.getContextPath()%>/img/logo_withpet.png" alt="logo__withpet"
+			class="brand__logo" />
 
-			<div>
-				<p class="contact__rights">
-					(유)위드펫<br /> 서울특별시 강남구 테헤란로1길 10 세경빌딩 3층 | 대표자 : ss0n9 | 사업자등록번호 :
-					211-29-99102 | 통신판매업신고:제 2018-서울강남-2635호 | 개인정보담당자 :
-					privacy@woohaha.co.kr <br />| 제휴문의 : partnership@woohaha.co.kr |
-					고객만족센터 : loveyou@withpet.co.kr | 호스팅 제공자: 위드펫 주식회사
-				</p>
-			</div>
+		<div>
+			<p class="contact__rights">
+				(유)위드펫<br /> 서울특별시 강남구 언주로 508 14층 | 대표자 : ss0n9 | 사업자등록번호 :
+				211-29-99102 | 통신판매업신고:제 2018-서울강남-2635호 | 개인정보담당자 :
+				privacy@woohaha.co.kr <br />| 제휴문의 : partnership@woohaha.co.kr |
+				고객만족센터 : loveyou@withpet.co.kr | 호스팅 제공자: 위드펫 주식회사
+			</p>
 		</div>
-		<div class="company__body">
-			<div></div>
-			<div>
-				<p class="contact__bottom">
-					<br /> (유)위드펫은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품/ 거래정보 및 거래와 관련하여
-					치킨의민족에 등록된 판매자의 고의 또는 과실로 소비자에게 발생하는 손해에 대해 (유)위드펫은 책임을 지지 않습니다. 상품
-					및 거래에 관하여 보다 정확한 정보는 해당 판매자에게 직접 확인하여 주시기 바랍니다. <br /> Copyright
-					WOOHAHA. All Rights Reserved.
-				</p>
-			</div>
+	</div>
+	<div class="company__body">
+		<div></div>
+		<div>
+			<p class="contact__bottom">
+				<br /> (유)위드펫은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품/ 거래정보 및 거래와 관련하여
+				치킨의민족에 등록된 판매자의 고의 또는 과실로 소비자에게 발생하는 손해에 대해 (유)위드펫은 책임을 지지 않습니다. 상품
+				및 거래에 관하여 보다 정확한 정보는 해당 판매자에게 직접 확인하여 주시기 바랍니다. <br /> Copyright
+				WOOHAHA. All Rights Reserved.
+			</p>
 		</div>
-	</section>
+	</div>
+</section>
 
 </body>
 <!-- Main -->

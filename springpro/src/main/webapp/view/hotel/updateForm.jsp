@@ -6,6 +6,7 @@
 	href="<%=request.getContextPath()%>/assets/css/updateform.css" />
 
 <div class="hotel__container">
+	<h3>호텔수정</h3>
 	<form class="hotel_form" action="update" name="f" method="post">
 		<div class="hotel_img">
 		<input type="hidden" name="picture" value="${hotel.picture}">
