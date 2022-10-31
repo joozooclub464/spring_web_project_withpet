@@ -194,7 +194,7 @@ textarea {
 }
 
 
-/* ---------------------------------안내문구 */
+/* --------------------------------- */
 
 p1 {
     font-size: 14px;
@@ -1372,12 +1372,10 @@ button:active,
 .button:hover,
 .button:active {
     /* box-shadow: inset 0 0 0 2px #9bf1ff; */
-    /* get started 메인화면에 테투리 박스 */
+    /* get started */
     box-shadow: inset 0 0 0 2px var(--color-pink);
-    /* 자세히보기 박스 */
     /* color: #9bf1 ff; */
     color: var(--color-dark-grey);
-    /* 화살표? */
 }
 
 input[type="submit"]:active,
@@ -1508,7 +1506,6 @@ input[type="button"].primary,
 button.primary,
 .button.primary {
     /* background-color: #ffffff; */
-    /* 메뉴 누르면 나오는 바 get started*/
     box-shadow: none;
     color: black;
 }
@@ -1525,7 +1522,6 @@ button.primary:active,
 .button.primary:active {
     /* background-color: #9bf1ff; */
     background-color: #fe918d;
-    /* 메뉴 누르면 나오는 바  get started 부분*/
     color: coral !important;
 }
 

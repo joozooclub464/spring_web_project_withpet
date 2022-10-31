@@ -110,7 +110,6 @@ p {
 	text-align: left;
 }
 
-/* ----------210505--------- */
 .bodystyle {
 	display: flex;
 	flex-direction: row;
@@ -322,7 +321,7 @@ content__desc2 {
 	padding: 40px;
 	text-align: left;
 }
-/*-----------------2021.05.13------------------------*/
+/*-----------------------------------------*/
 
 /* Actions */
 ul.actions {
