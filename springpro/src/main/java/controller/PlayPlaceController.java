@@ -66,7 +66,6 @@ public class PlayPlaceController {
 		return "/single/pictureimg";
 	}
 
-	/* ========ssong==================== */
 	@RequestMapping("/list")
 	public String list(int playid, Model model) { /*
 										 * 리스트는 값 보낼 필요 없이(걸러낼 필요 없다 ex.id로) 리스트를 받아오기만 하면 되니까 Model model로 넣어줬음.(model로
