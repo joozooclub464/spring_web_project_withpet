@@ -35,7 +35,6 @@
 	</div>
 
 	<div class="content">
-
 		<h3>
 			<c:if test="${boardid==1}">
   				FAQ
@@ -70,50 +69,52 @@
 					<tr>
 						<td>${board.b_num}</td>
 						<!-- foreach var부분이 여기에 board로 들어간것 -->
-						<td style="text-align: left"><c:set var="boardnum"
-								value="${board.b_num-1 }" /> <c:if
-								test="${board.file1 != null && !board.file1.trim() eq ''}">
+						<td style="text-align: left">
+							<c:set var="boardnum" value="${board.b_num-1 }" /> 
+							<c:if test="${board.file1 != null && !board.file1.trim() eq ''}">
 								<a href="upfile/${board.file1}" style="text-decoration: none;">첨부</a>
-							</c:if> <c:if test="${board.file1 == null || board.file1.trim() eq ''}">
-     &nbsp;&nbsp;&nbsp; </c:if> <c:if test="${board.reflevel > 0}">
+							</c:if> 
+							<c:if test="${board.file1 == null || board.file1.trim() eq ''}">
+     &nbsp;&nbsp;&nbsp; 	</c:if> 
+     						<c:if test="${board.reflevel > 0}">
 								<c:forEach var="i" begin="1" end="${board.reflevel-1 }">
-		  
 	              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	      
-	      </c:forEach>	       
-	  └</c:if> <a href="info?b_num=${board.b_num}">${board.subject}</a></td>
+	      						</c:forEach>	       
+	  └						</c:if> 
+	  						<a href="info?b_num=${board.b_num}">${board.subject}</a>
+	  					</td>
 						<td>${board.id}</td>
 						<td><fmt:formatDate type="date" value="${board.regdate}" />
-
-						</td>
+						<!-- </td> -->
 						<td>${board.readcnt}</td>
 						<td>${board.like1}</td>
 					</tr>
 				</c:forEach>
 
 				<tr>
-					<td colspan="6"><c:if test="${startpage <= bottomLine}">[이전] </c:if>
+					<td colspan="6">
+						<c:if test="${startpage <= bottomLine}">[이전] </c:if>
 						<c:if test="${startpage > bottomLine}">
 							<a href="list?page=${startpage - bottomLine}">[이전]</a>
-						</c:if> <c:forEach var="a" begin="${startpage}" end="${endpage}">
-
+						</c:if> 
+						<c:forEach var="a" begin="${startpage}" end="${endpage}">
 							<c:if test="${a==pageNum }">[${a}] </c:if>
 							<c:if test="${a!=pageNum }">
-
 								<a href="list?page=${a}">[${a}]</a>
 							</c:if>
-						</c:forEach> <c:if test="${endpage >= maxpage}">  [다음]</c:if> <c:if
-							test="${endpage < maxpage}">
+						</c:forEach> 
+						<c:if test="${endpage >= maxpage}">  [다음]</c:if> 
+						<c:if test="${endpage < maxpage}">
 							<a href="list?page=${startpage + bottomLine}">[다음]</a>
-						</c:if></td>
+						</c:if>
+					</td>
 				</tr>
 			</c:if>
-
 			<tr>
-				<td colspan="6" style="text-align: right"><a
-					href="writeForm?boardid=${boardid}">[글쓰기]</a></td>
+				<td colspan="6" style="text-align: right">
+					<a href="writeForm?boardid=${boardid}">[글쓰기]</a>
+				</td>
 			</tr>
-
 		</table>
 	</div>
 </div>
