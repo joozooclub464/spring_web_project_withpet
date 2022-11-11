@@ -8,7 +8,7 @@
 <link rel="stylesheet"
    href="<%=request.getContextPath()%>/assets/css/hotel_info.css" />
 <script type="text/javascript"
-   src="//dapi.kakao.com/v2/maps/sdk.js?appkey=&libraries=services,clusterer,drawing"></script>
+   src="//dapi.kakao.com/v2/maps/sdk.js?appkey=kakaoappkey&libraries=services,clusterer,drawing"></script>
 
 <body class="bodysize">
    <div style="text-align: center;">
