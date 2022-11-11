@@ -2,9 +2,9 @@
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/playpet.css" />
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=381b7bef7ae9fa02ccc12e081a8fa829&libraries=services,clusterer,drawing"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=kakaoappkey&libraries=services,clusterer,drawing"></script>
 
-<!-- µå·Ó´Ù¿î css -->
+<!-- ë“œë¡­ë‹¤ìš´ css -->
 <script src="<%=request.getContextPath()%>/assets/js/playpet.js" defer></script>
 <style>
 .cafecon {
@@ -56,45 +56,45 @@
 	<div>
 		<div id="map" style="width: 400px; height: 400px; margin-right: 15px"></div>
 		<script>
-			var mapContainer = document.getElementById('map'), // Áöµµ¸¦ Ç¥½ÃÇÒ div 
+			var mapContainer = document.getElementById('map'), // ì§€ë„ë¥¼ í‘œì‹œí•  div 
 			mapOption = {
-				center : new kakao.maps.LatLng(37.4906193, 126.9192028), // ÁöµµÀÇ Áß½ÉÁÂÇ¥
+				center : new kakao.maps.LatLng(37.4906193, 126.9192028), // ì§€ë„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
 				level : 3
-			// ÁöµµÀÇ È®´ë ·¹º§
+			// ì§€ë„ì˜ í™•ëŒ€ ë ˆë²¨
 			};
 
-			// Áöµµ¸¦ »ı¼ºÇÕ´Ï´Ù    
+			// ì§€ë„ë¥¼ ìƒì„±í•©ë‹ˆë‹¤    
 			var map = new kakao.maps.Map(mapContainer, mapOption);
 
-			// ÁÖ¼Ò-ÁÂÇ¥ º¯È¯ °´Ã¼¸¦ »ı¼ºÇÕ´Ï´Ù
+			// ì£¼ì†Œ-ì¢Œí‘œ ë³€í™˜ ê°ì²´ë¥¼ ìƒì„±í•©ë‹ˆë‹¤
 			var geocoder = new kakao.maps.services.Geocoder();
 
-			// ÁÖ¼Ò·Î ÁÂÇ¥¸¦ °Ë»öÇÕ´Ï´Ù
+			// ì£¼ì†Œë¡œ ì¢Œí‘œë¥¼ ê²€ìƒ‰í•©ë‹ˆë‹¤
 			geocoder
 					.addressSearch(
 							'${playPlace.p_location}',
 							function(result, status) {
 
-								// Á¤»óÀûÀ¸·Î °Ë»öÀÌ ¿Ï·áµÆÀ¸¸é 
+								// ì •ìƒì ìœ¼ë¡œ ê²€ìƒ‰ì´ ì™„ë£Œëìœ¼ë©´ 
 								if (status === kakao.maps.services.Status.OK) {
 
 									var coords = new kakao.maps.LatLng(
 											result[0].y, result[0].x);
 
-									// °á°ú°ªÀ¸·Î ¹ŞÀº À§Ä¡¸¦ ¸¶Ä¿·Î Ç¥½ÃÇÕ´Ï´Ù
+									// ê²°ê³¼ê°’ìœ¼ë¡œ ë°›ì€ ìœ„ì¹˜ë¥¼ ë§ˆì»¤ë¡œ í‘œì‹œí•©ë‹ˆë‹¤
 									var marker = new kakao.maps.Marker({
 										map : map,
 										position : coords
 									});
 
-									// ÀÎÆ÷À©µµ¿ì·Î Àå¼Ò¿¡ ´ëÇÑ ¼³¸íÀ» Ç¥½ÃÇÕ´Ï´Ù
+									// ì¸í¬ìœˆë„ìš°ë¡œ ì¥ì†Œì— ëŒ€í•œ ì„¤ëª…ì„ í‘œì‹œí•©ë‹ˆë‹¤
 									var infowindow = new kakao.maps.InfoWindow(
 											{
 												content : '<div style="width:150px;text-align:center;padding:6px 0;">${playPlace.p_name}</div>'
 											});
 									infowindow.open(map, marker);
 
-									// ÁöµµÀÇ Áß½ÉÀ» °á°ú°ªÀ¸·Î ¹ŞÀº À§Ä¡·Î ÀÌµ¿½ÃÅµ´Ï´Ù
+									// ì§€ë„ì˜ ì¤‘ì‹¬ì„ ê²°ê³¼ê°’ìœ¼ë¡œ ë°›ì€ ìœ„ì¹˜ë¡œ ì´ë™ì‹œí‚µë‹ˆë‹¤
 									map.setCenter(coords);
 								}
 							});
@@ -102,12 +102,12 @@
 	</div>
 	<div class="info">
 		<ul>
-			<li>À§Ä¡ : ${playPlace.p_location}</li>
-			<li>ÀüÈ­ : ${playPlace.p_tel}</li>
-			<li>ÁÖÂ÷¿©ºÎ : ${playPlace.park == 1 ? "ÁÖÂ÷°¡´É" : "ÁÖÂ÷ºÒ°¡"}</li>
-			<li>ÀÌ¿ë·á : ¹«·á</li>
-			<li>¿î¿µ±â°£ : ${playPlace.open_hour}</li>
-			<li>À¯ÀÇ»çÇ× : ${playPlace.caution}</li>
+			<li>ìœ„ì¹˜ : ${playPlace.p_location}</li>
+			<li>ì „í™” : ${playPlace.p_tel}</li>
+			<li>ì£¼ì°¨ì—¬ë¶€ : ${playPlace.park == 1 ? "ì£¼ì°¨ê°€ëŠ¥" : "ì£¼ì°¨ë¶ˆê°€"}</li>
+			<li>ì´ìš©ë£Œ : ë¬´ë£Œ</li>
+			<li>ìš´ì˜ê¸°ê°„ : ${playPlace.open_hour}</li>
+			<li>ìœ ì˜ì‚¬í•­ : ${playPlace.caution}</li>
 			<li></li>
 		</ul>
 	</div>
