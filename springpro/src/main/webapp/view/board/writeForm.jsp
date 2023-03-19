@@ -40,13 +40,13 @@
 				<caption>
 					<c:if test="${boardid==1}">
   					FAQ 글쓰기
-  				</c:if>
+  					</c:if>
 					<c:if test="${boardid==2}">
   					Q&A 글쓰기
-  				</c:if>
+  					</c:if>
 					<c:if test="${boardid==3}">
   					공지사항 글쓰기
-  				</c:if>
+  					</c:if>
 				</caption>
 
 				<td><input type="hidden" value="${boardid}" name="boardid"></td> <!-- 받아온 값 EL로 value에적고 name으로 controller에 넘김 -->
