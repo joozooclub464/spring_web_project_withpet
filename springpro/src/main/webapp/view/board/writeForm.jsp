@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%-- /WebContent/model1/board/writeForm.jsp --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/board.css" />
 
@@ -8,17 +9,17 @@
 
 	<div class="content__2">
 		<div class="content__desc" style="padding: 0px 50px 0px 0px">
-			<p1>»ç¶÷°ú ¹Ý·Áµ¿¹°À»<br>
-			ÇâÇÑ ¸ðµç ¿¬°áÀÇ ½ÃÀÛ, À§µåÆê</p1>
+			<p1>ì‚¬ëžŒê³¼ ë°˜ë ¤ë™ë¬¼ì„<br>
+			í–¥í•œ ëª¨ë“  ì—°ê²°ì˜ ì‹œìž‘, ìœ„ë“œíŽ«</p1>
 		</div>
 		<div class="content__desc2" style="padding: 0px 130px 0px 0px">
-			<p4>¼ÒÁßÇÑ °¡Á·°ú ¾ÈºÎ¸¦ ¹¯°í ÀÌ¾ß±â¸¦ ³ª´² º¸¼¼¿ä. ¿©ÇàÀÇ Æí¸®¸¦ µ½´Â ´Ù¾çÇÑ ±â´Éµµ ÁØºñµÇ¾î ÀÖ½À´Ï´Ù.<br>
-			¼¼»óÀ» ÇâÇØ ¿­¸° ¹®À» ¡®Åå¡¯ÇÏ°í µÎµå·Á º¸¼¼¿ä.</p4>
+			<p4>ì†Œì¤‘í•œ ê°€ì¡±ê³¼ ì•ˆë¶€ë¥¼ ë¬»ê³  ì´ì•¼ê¸°ë¥¼ ë‚˜ëˆ  ë³´ì„¸ìš”. ì—¬í–‰ì˜ íŽ¸ë¦¬ë¥¼ ë•ëŠ” ë‹¤ì–‘í•œ ê¸°ëŠ¥ë„ ì¤€ë¹„ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.<br>
+			ì„¸ìƒì„ í–¥í•´ ì—´ë¦° ë¬¸ì„ â€˜í†¡â€™í•˜ê³  ë‘ë“œë ¤ ë³´ì„¸ìš”.</p4>
 		</div>
 		<ul class="actions">
-			<li><a href="#one" class="button next scrolly"> <p2>ÀÚ¼¼È÷
-					º¸±â</p2>
-			</a> <!-- <button class=detail type="button"><p2>ÀÚ¼¼È÷ º¸±â</p2></button> -->
+			<li><a href="#one" class="button next scrolly"> <p2>ìžì„¸ížˆ
+					ë³´ê¸°</p2>
+			</a> <!-- <button class=detail type="button"><p2>ìžì„¸ížˆ ë³´ê¸°</p2></button> -->
 			</li>
 		</ul>
 	</div>
@@ -28,7 +29,7 @@
 		<ul class="nav">
 			<li><a class="active" href="list?boardid=1">FAQ</a></li>
 			<li><a class="active" href="list?boardid=2">Q & A</a></li>
-			<li><a class="active" href="list?boardid=3">°øÁö»çÇ×</a></li>
+			<li><a class="active" href="list?boardid=3">ê³µì§€ì‚¬í•­</a></li>
 		</ul>
 	</div>
 
@@ -38,39 +39,39 @@
 			<table>
 				<caption>
 					<c:if test="${boardid==1}">
-  					FAQ ±Û¾²±â
+  					FAQ ê¸€ì“°ê¸°
   				</c:if>
 					<c:if test="${boardid==2}">
-  					Q&A ±Û¾²±â
+  					Q&A ê¸€ì“°ê¸°
   				</c:if>
 					<c:if test="${boardid==3}">
-  					°øÁö»çÇ× ±Û¾²±â
+  					ê³µì§€ì‚¬í•­ ê¸€ì“°ê¸°
   				</c:if>
 				</caption>
 
-				<td><input type="hidden" value="${boardid}" name="boardid"></td> <!-- ¹Þ¾Æ¿Â °ª EL·Î value¿¡Àû°í nameÀ¸·Î controller¿¡ ³Ñ±è -->
+				<td><input type="hidden" value="${boardid}" name="boardid"></td> <!-- ë°›ì•„ì˜¨ ê°’ ELë¡œ valueì—ì ê³  nameìœ¼ë¡œ controllerì— ë„˜ê¹€ -->
 				<tr>
-					<td>±Û¾´ÀÌ</td>
+					<td>ê¸€ì“´ì´</td>
 					<td><input type="text" name="id" value="${id}"></td>
 				</tr>
 				<tr>
-					<td>ºñ¹Ð¹øÈ£</td>
+					<td>ë¹„ë°€ë²ˆí˜¸</td>
 					<td><input type="password" name="pass"></td>
 				</tr>
 				<tr>
-					<td>Á¦¸ñ</td>
+					<td>ì œëª©</td>
 					<td><input type="text" name="subject"></td>
 				</tr>
 				<tr>
-					<td>³»¿ë</td>
+					<td>ë‚´ìš©</td>
 					<td><textarea rows="15" name="content"></textarea></td>
 				</tr>
 				<tr>
-					<td>Ã·ºÎÆÄÀÏ</td>
+					<td>ì²¨ë¶€íŒŒì¼</td>
 					<td><input type="file" name="uploadfile"></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="submit" value="[°Ô½Ã¹°µî·Ï]"></td>
+					<td colspan="2"><input type="submit" value="[ê²Œì‹œë¬¼ë“±ë¡]"></td>
 				</tr>
 
 			</table>
