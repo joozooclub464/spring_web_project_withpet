@@ -79,10 +79,10 @@ public class ReserveHotelController {
 	@RequestMapping("/review")
 	public String review(H_Review review, Model model) {
 		System.out.println(review);
-		String msg = "¸®ºä ÀÛ¼ºÀ» ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+		String msg = "ë¦¬ë·° ì‘ì„±ì„ ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.";
 		String url = "review_form";
 		if (h_rvDao.h_insert(review)) {
-			msg = "¸®ºä ÀÛ¼ºÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.";
+			msg = "ë¦¬ë·° ì‘ì„±ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.";
 			url = "list";
 		}
 		model.addAttribute("url", url);
@@ -94,21 +94,34 @@ public class ReserveHotelController {
 	@RequestMapping("/reserveForm")
 	public String reserveForm(HttpSession session, int h_num, Model model) {
 		String id = (String) session.getAttribute("id");
-		Hotel hotel = hDao.selectOne(h_num);
-		Member member = mDao.selectOne(id);
-		model.addAttribute("member", member);
-		model.addAttribute("hotel", hotel);
-		return "/single/HreserveForm";
+		//
+		String msg = "";
+		String url = "";
+		if(id == null || id.trim().contentEquals("")) {
+			msg = "ë¡œê·¸ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤.";
+			url = "/springpro/member/loginForm";
+			model.addAttribute("msg",msg);
+			model.addAttribute("url",url);
+			return "/alert";
+		} else {
+			//
+			Hotel hotel = hDao.selectOne(h_num);
+			Member member = mDao.selectOne(id);
+			model.addAttribute("member", member);
+			model.addAttribute("hotel", hotel);
+			return "/single/HreserveForm";
+		}
+		
 	}
 
 	@RequestMapping("/reserve")
 	public String reserve(ReserveHotel reserveHotel, Model model) {
 		System.out.println(reserveHotel);
-		String msg = "¿¹¾àÀ» ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+		String msg = "ì˜ˆì•½ì„ ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.";
 		String url = "reserveForm";
 		int rh_num = dao.insert(reserveHotel);
 		if (rh_num > 0) {
-			msg = "¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.";
+			msg = "ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.";
 			url = "detail?rh_num=" + rh_num;
 		}
 		model.addAttribute("url", url);
@@ -119,13 +132,13 @@ public class ReserveHotelController {
 	@RequestMapping("/cancel")
 	public String cancel(HttpSession session, int rh_num, Model model) {
 		String id = (String) session.getAttribute("id");
-		String msg = "È¸¿ø´ÔÀÇ ¾ÆÀÌµğ·Î ¿¹¾àµÈ È£ÅÚÀÌ ¾Æ´Õ´Ï´Ù.";
+		String msg = "íšŒì›ë‹˜ì˜ ì•„ì´ë””ë¡œ ì˜ˆì•½ëœ í˜¸í…”ì´ ì•„ë‹™ë‹ˆë‹¤.";
 		String url = "list";
 		if (id.equals(dao.selectOne(rh_num).getId())) {
 			if (dao.delete(rh_num) > 0) {
-				msg = "¿¹¾àÀ» Ãë¼ÒÇß½À´Ï´Ù.";
+				msg = "ì˜ˆì•½ì„ ì·¨ì†Œí–ˆìŠµë‹ˆë‹¤.";
 			} else {
-				msg = "¿¹¾àÀ» Ãë¼ÒÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.";
+				msg = "ì˜ˆì•½ì„ ì·¨ì†Œí•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.";
 			}
 		}
 		model.addAttribute("url", url);
@@ -146,14 +159,14 @@ public class ReserveHotelController {
 	@RequestMapping("/edit")
 	public String edit(HttpSession session, int rh_num, ReserveHotel reserveHotel, Model model) {
 		String id = (String) session.getAttribute("id");
-		String msg = "È¸¿ø´ÔÀÇ ¾ÆÀÌµğ·Î ¿¹¾àµÈ È£ÅÚÀÌ ¾Æ´Õ´Ï´Ù.";
+		String msg = "íšŒì›ë‹˜ì˜ ì•„ì´ë””ë¡œ ì˜ˆì•½ëœ í˜¸í…”ì´ ì•„ë‹™ë‹ˆë‹¤.";
 		String url = "list";
 		if (id.equals(dao.selectOne(rh_num).getId())) {
 			if (dao.update(reserveHotel) > 0) {
-				msg = "¿¹¾àÀ» ¼º°øÀûÀ¸·Î ¼öÁ¤ÇÏ¿´½À´Ï´Ù.";
+				msg = "ì˜ˆì•½ì„ ì„±ê³µì ìœ¼ë¡œ ìˆ˜ì •í•˜ì˜€ìŠµë‹ˆë‹¤.";
 				url = "detail?rh_num=" + rh_num;
 			} else {
-				msg = "¿¹¾àÀ» ¼öÁ¤ÇÏ´Âµ¥ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+				msg = "ì˜ˆì•½ì„ ìˆ˜ì •í•˜ëŠ”ë° ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.";
 				url = "detail?rh_num=" + rh_num;
 			}
 		}
@@ -182,7 +195,7 @@ public class ReserveHotelController {
 
 	@RequestMapping("/detail")
 	public String detail(int rh_num, Model model) {
-		ReserveHotel reserveHotel = dao.selectOne(rh_num); // °Ô½Ã¹° Á¶È¸
+		ReserveHotel reserveHotel = dao.selectOne(rh_num); // ê²Œì‹œë¬¼ ì¡°íšŒ
 		model.addAttribute("reserveHotel", reserveHotel);
 		return "/single/Hdetail";
 	}
